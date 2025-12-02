@@ -11,7 +11,7 @@ const Navbar = ({ isDark, setDark }) => {
   //   console.log(click);
 
   return (
-    <nav className="md:container  mx-auto py-4 px-3 lg:px-10 sticky top-0 z-100">
+    <nav className="md:container  mx-auto py-4 px-3 lg:px-10 fixed top-0 right-0 left-0 z-100">
       <div className="flex md:flex-row relative  justify-between md:items-center ">
         <div className="flex items-center justify-between  w-full md:w-auto pr-2 md:pr-0">
           <h1 className="text-kuning text-[1.5rem] font-semibold">.Bileam</h1>
@@ -144,6 +144,7 @@ const Navbar = ({ isDark, setDark }) => {
               About
             </Link>
             <Link
+              onClick={() => setClick(!click)}
               to="works"
               smooth={true}
               duration={500}
@@ -153,6 +154,7 @@ const Navbar = ({ isDark, setDark }) => {
               Works
             </Link>
             <Link
+              onClick={() => setClick(!click)}
               to="resume"
               smooth={true}
               duration={500}
@@ -162,6 +164,7 @@ const Navbar = ({ isDark, setDark }) => {
               Resume
             </Link>
             <Link
+              onClick={() => setClick(!click)}
               to="blog"
               smooth={true}
               duration={500}
@@ -171,6 +174,7 @@ const Navbar = ({ isDark, setDark }) => {
               Blog
             </Link>
             <Link
+              onClick={() => setClick(!click)}
               to="contact"
               smooth={true}
               duration={500}

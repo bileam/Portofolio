@@ -8,22 +8,23 @@ const Home = () => {
       <div className="flex md:flex-row flex-col ">
         <div className="flex flex-col flex-1 gap-5 order-2 md:order-1">
           <h1 className="dark:text-kuning font-bold text-center md:text-start w-[90%] md:w-[60%]  text-[1.9rem] md:text-[2.4rem]">
-            hi i'a bileam web developer
+            hi i'am bileam web developer
           </h1>
-          <p className="dark:text-t-fonta md:text-[1rem] text-[0.9rem] dark:font-extralight  md:text-start   w-[90%]">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Consequatur, dicta dolorem delectus illum perspiciatis repudiandae.
-            Alias minus consequatur veritatis doloribus eos aperiam, aspernatur,
-            eaque illo quidem minima incidunt deleniti culpa?
+          <p className="dark:text-t-fonta md:text-[1rem] text-[0.8rem]  md:text-start text-justify  w-[90%]">
+            Hallo.. Nama saya bileam mangalla, saya lahir di toraja
+            09-januari-2003, jika di jumlahkan sekarang umur saya 22 Tahun, saya
+            lulusan S1 Teknik Informatika di Universitas Kristen Satya Wacana,
+            fakultas Teknologi Informasi. sekarang saya berdomisi salatiga.
+            Terimakasih
           </p>
           <div className="flex gap-2  ">
-            <button className="bg-kuning  cursor-pointer px-7 py-1 rounded-lg shadow-2xl dark:text-black  font-extralight">
+            <button className="bg-kuning  cursor-pointer px-4 py-1 md:px-7 md:py-1 rounded-lg shadow-2xl dark:text-black  ">
               Hare me
             </button>
             <a
               href="/CV-Bileam_Mangalla.pdf"
               download
-              className="dark:border-kuning cursor-pointer border dark:text-kuning  px-2 py-1 rounded-lg shadow-2xl "
+              className="dark:border-kuning cursor-pointer  border-2 dark:text-kuning  px-2 py-1 rounded-lg shadow-2xl "
             >
               Download Cv
             </a>

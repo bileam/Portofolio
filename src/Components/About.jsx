@@ -6,28 +6,28 @@ const About = () => {
   return (
     <div
       id="about"
-      className="md:container min-h-screen md:mx-auto   lg:min-h-screen    px-3 lg:px-10   md:h-[50vh]  flex flex-col justify-center  md:justify-center md:min-h-screen  lg:justify-center md:pb-0  "
+      className="pt-40  md:pt-0 md:container   md:mx-auto   lg:min-h-screen    px-3 lg:px-10   md:h-[50vh]  flex flex-col justify-center  md:justify-center md:min-h-screen  lg:justify-center md:pb-0  "
     >
-      <div className=" flex md:flex-row flex-col  items-center  justify-start gap-4 md:gap-0">
-        <div className=" z-3 dark:text-t-fonta  flex-col items-center group">
+      <div className=" flex md:flex-row flex-col  items-center  justify-start gap-6 md:gap-0">
+        <div className=" z-3 dark:text-t-fonta   flex-col items-center group">
           <div className="flex justify-between">
             <img
               src={js}
-              className="animate-bounce overflow-hidden  md:group-hover:-translate-y-10 group-hover:-translate-y-20 group-hover:-translate-x-5  opacity-0 group-hover:opacity-100 transition-all duration-500 md:w-9  object-contain w-7 md:object-contain"
+              className=" animate-bounce overflow-hidden  md:group-hover:-translate-y-10 -translate-y-5   md:opacity-0 group-hover:opacity-100 transition-all duration-500 md:w-9  object-contain w-7 md:object-contain"
             />
             <img
               src={tailwind}
-              className="animate-bounce overflow-hidden md:group-hover:-translate-y-16 group-hover:-translate-y-30 transition-all duration-700 opacity-0 group-hover:opacity-100 md:w-9  object-contain w-7 md:object-contain"
+              className="animate-bounce overflow-hidden md:group-hover:-translate-y-16 -translate-y-13 transition-all duration-700 md:opacity-0 group-hover:opacity-100 md:w-9  object-contain w-7 md:object-contain"
             />
             <img
               src={react}
-              className="animate-bounce overflow-hidden md:group-hover:-translate-y-10 -translate-y-20 transition-all group-hover:translate-x-5 duration-1000 opacity-0 group-hover:opacity-100 md:w-10 object-contain w-7 md:object-contain"
+              className="animate-bounce overflow-hidden md:group-hover:-translate-y-10 -translate-y-5 transition-all  duration-1000 md:opacity-0 group-hover:opacity-100 md:w-10 object-contain w-7 md:object-contain"
             />
           </div>
           <img src={gambar} alt="" className="object-cover md:w-auto w-65" />
         </div>
         <div className="flex-1 z-1 ">
-          <div className="rounded-xl shadow-2xl shadow-black  sm:w-full lg:w-[90%] lg:translate-y-4     md:-translate-x-17 py-3 px-3 md:px-0 shadow-l-2xl dark:bg-f-text flex flex-col gap-2 ">
+          <div className="rounded-xl shadow-2xl shadow-black w-80 h-full  sm:w-full lg:w-[90%] lg:translate-y-4     md:-translate-x-17 py-3 px-3 md:px-0 shadow-l-2xl dark:bg-f-text flex flex-col gap-2 ">
             <h1 className="dark:text-kuning font-semibold text-[1rem] md:pl-20  md:text-[1rem] lg:text-[1.3rem]">
               Tentang saya
             </h1>
@@ -37,7 +37,9 @@ const About = () => {
               website yang responsif, modern, dan mudah digunakan, serta terus
               mengembangkan kemampuan dalam teknologi web.
               <br />
-              <span className="text-pink-600 border-b">Hover Image</span>
+              <span className="text-pink-600 border-b md:opacity-100 opacity-0  ">
+                Hover Image
+              </span>
             </p>
           </div>
         </div>
