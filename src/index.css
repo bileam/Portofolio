@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-kuning: #fdd65f;
+  --color-bacg: #1e0235;
+  --color-f-text: #381e4b;
+  --color-b-black : #000000
+  --color-putih :#FFFFFF
+  --color-t-font: #9d8cb0;
+  --color-t-fonta:#cdcdcd
+}
+
+/* .dark {
+  transition: background-color 0.9s ease, color 0.9s ease;
+} */
