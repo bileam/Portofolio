@@ -3,6 +3,7 @@ import Home from "../Components/Home";
 import Navbar from "../Components/Navbar";
 import About from "../Components/About";
 import MySkill from "../Components/MySkill";
+import Myworks from "../Components/Myworks";
 
 const Utama = () => {
   const [isDark, setDark] = useState(true);
@@ -13,6 +14,7 @@ const Utama = () => {
         <Home />
         <About />
         <MySkill />
+        <Myworks />
       </div>
     </div>
   );

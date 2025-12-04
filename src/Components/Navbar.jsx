@@ -68,22 +68,22 @@ const Navbar = ({ isDark, setDark }) => {
             About
           </Link>
           <Link
-            to="works"
+            to="skille"
             smooth={true}
             duration={500}
             activeClass="border-b border-kuning"
             spy={true}
             className="cursor-pointer"
           >
-            Works
+            Skill
           </Link>
           <Link
-            to="resume"
+            to="workss"
             smooth={true}
             duration={500}
             className="cursor-pointer"
           >
-            Resume
+            Works
           </Link>
           <Link
             to="blog"
@@ -145,23 +145,23 @@ const Navbar = ({ isDark, setDark }) => {
             </Link>
             <Link
               onClick={() => setClick(!click)}
-              to="works"
+              to="skille"
+              smooth={true}
+              duration={500}
+              activeClass="border-b dark:border-kuning w-20 dark:text-kuning  text-f-text"
+              className="cursor-pointer"
+            >
+              Skill
+            </Link>
+            <Link
+              onClick={() => setClick(!click)}
+              to="workss"
               smooth={true}
               duration={500}
               activeClass="border-b dark:border-kuning w-20 dark:text-kuning  text-f-text"
               className="cursor-pointer"
             >
               Works
-            </Link>
-            <Link
-              onClick={() => setClick(!click)}
-              to="resume"
-              smooth={true}
-              duration={500}
-              activeClass="border-b dark:border-kuning w-20 dark:text-kuning  text-f-text"
-              className="cursor-pointer"
-            >
-              Resume
             </Link>
             <Link
               onClick={() => setClick(!click)}

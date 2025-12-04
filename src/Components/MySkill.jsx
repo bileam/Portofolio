@@ -4,14 +4,12 @@ import react from "../assets/react.svg";
 const MySkill = () => {
   return (
     <div
-      id="works"
-      className="md:container pt-40 md:pt-0 font-sans   mx-auto dark:text-t-fonta  px-3 lg:px-10 flex   min-h-200 "
+      id="skille"
+      className="md:container pt-40 md:pt-40 font-sans   mx-auto dark:text-t-fonta  px-3 lg:px-10 flex   min-h-200 md:min-h-auto  "
     >
       <div className="flex flex-col  gap-2 w-full px-2">
         <div className="">
-          <h1 className="text-[1rem] md:text-[1.5rem] dark:text-putih font-medium">
-            My Skill
-          </h1>
+          <h1 className="text-[1rem] dark:text-putih font-medium">My Skill</h1>
         </div>
         <div className="flex flex-col md:flex-row md:gap-2 gap-9">
           <div className="w-full flex flex-col md:flex-1 items-center py-2 px-2  gap-1 rounded-md ">

@@ -27,7 +27,7 @@ const About = () => {
           <img src={gambar} alt="" className="object-cover md:w-auto w-65" />
         </div>
         <div className="flex-1 z-1 ">
-          <div className="rounded-xl shadow-2xl shadow-black w-80 h-full  sm:w-full lg:w-[90%] lg:translate-y-4     md:-translate-x-17 py-3 px-3 md:px-0 shadow-l-2xl dark:bg-f-text flex flex-col gap-2 ">
+          <div className="rounded-xl shadow-2xl shadow-black w-80 h-full  sm:w-full lg:w-[90%] lg:translate-y-4  md:-translate-x-17 py-3 px-3 md:px-0 shadow-l-2xl dark:bg-f-text flex flex-col gap-2 ">
             <h1 className="dark:text-kuning font-semibold text-[1rem] md:pl-20  md:text-[1rem] lg:text-[1.3rem]">
               Tentang saya
             </h1>
