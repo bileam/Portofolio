@@ -13,7 +13,7 @@ const Myworks = () => {
             see all
           </button>
         </div>
-        <div className="flex flex-col md:flex-row gap-5 md:gap-5 px-10 md:px-0 ">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-5 px-2 md:px-0 ">
           <div className="flex-1  shadow-2xl rounded-2xl dark:bg-f-text transition-colors duration-500">
             <img
               src={tas}
