@@ -12,6 +12,28 @@
   --color-t-fonta:#cdcdcd
 }
 
+
+/* membuat class Tailwind baru */
+@utility zoom-in {
+  animation: zoomIn 1.5s ease-out forwards;
+}
+
+/* scale: 0.8 → elemen lebih kecil (80%)
+opacity: 0 → elemen tidak terlihat (transparan)
+ */
+@keyframes zoomIn {
+  0% {
+    scale: 0.8;
+    opacity: 0;
+  }
+  /* scale: 1 → ukuran normal
+
+opacity: 1 → fully terlihat */
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
 /* .dark {
   transition: background-color 0.9s ease, color 0.9s ease;
 } */
