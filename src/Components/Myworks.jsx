@@ -37,7 +37,7 @@ const Myworks = () => {
     <div
       ref={ref}
       id="workss"
-      className={`md:container pt-40 md:pt-40 font-sans pb-10  mx-auto dark:text-t-fonta  px-3 lg:px-10 flex  
+      className={`md:container pt-20  md:pt-25 font-sans pb-10  mx-auto dark:text-t-fonta  px-3 lg:px-10 flex  
      `}
     >
       <div className="flex flex-col w-full gap-7">

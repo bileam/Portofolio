@@ -6,7 +6,7 @@ const MySkill = () => {
   return (
     <div
       id="skille"
-      className="md:container pt-40 md:pt-40 font-sans   mx-auto dark:text-t-fonta  px-3 lg:px-10 flex   min-h-200 md:min-h-auto  "
+      className="md:container pt-25 md:pt-25 font-sans   mx-auto dark:text-t-fonta  px-3 lg:px-10 flex   min-h-200 md:min-h-auto  "
     >
       <div className="flex flex-col  gap-2 w-full px-2">
         <div className="">

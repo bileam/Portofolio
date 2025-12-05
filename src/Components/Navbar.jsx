@@ -11,8 +11,8 @@ const Navbar = ({ isDark, setDark }) => {
   //   console.log(click);
 
   return (
-    <nav className="md:container  mx-auto py-4 px-3 lg:px-10 fixed top-0 right-0 left-0 z-100">
-      <div className="flex md:flex-row relative  justify-between md:items-center ">
+    <nav className="md:container   mx-auto py-4 px-3 lg:px-10 fixed top-0 right-0 left-0 z-100 dark:bg-bacg">
+      <div className="flex md:flex-row relative  justify-between md:items-center md:dark:bg-bacg md:rounded-full p-2">
         <div className="flex items-center justify-between  w-full md:w-auto pr-2 md:pr-0">
           <h1 className="text-kuning text-[1.5rem] font-semibold">.Bileam</h1>
           <div className="flex items-center gap-3">

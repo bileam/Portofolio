@@ -39,7 +39,6 @@ const Home = () => {
             </div>
           </Zoom_in>
         </div>
-
         <div className="flex flex-1 justify-center order-1 md:order-2 ">
           <Zoom_in>
             <img src={gambar1} alt="" className="object-cover md:w-auto w-80" />
