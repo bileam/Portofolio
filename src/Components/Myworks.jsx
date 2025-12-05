@@ -1,6 +1,17 @@
+import { useState } from "react";
 import tas from "../assets/Gambar/Tas.png";
+import { useEffect } from "react";
 
 const Myworks = () => {
+  const [datas, setDatas] = useState([]);
+  useEffect(() => {
+    fetch("/data/Works.json")
+      .then((res) => res.json())
+      .then((result) => setDatas(result))
+      .catch((err) => console.log(err));
+  }, []);
+
+  console.log(datas);
   return (
     <div
       id="workss"
@@ -14,63 +25,30 @@ const Myworks = () => {
           </button>
         </div>
         <div className="flex flex-col md:flex-row gap-5 md:gap-5 px-2 md:px-0 ">
-          <div className="flex-1  shadow-2xl rounded-2xl dark:bg-f-text transition-colors duration-500">
-            <img
-              src={tas}
-              alt=""
-              className="w-full h-35 object-cover rounded-t-2xl bg-center "
-            />
-            <div className="flex flex-col items-center gap-2 mt-2 text-center mb-3">
-              <h1 className="text-[1.1rem] font-semi">Toko Tas</h1>
-              <h1 className="text-[0.8rem] px-6  w-[95%] overflow-hidden">
-                sebuah web penjualan tas online toko Aura & co.
-              </h1>
-              <a
-                href="https://web-tas-h6ax.vercel.app/"
-                className="px-4 py-1 dark:bg-kuning bg-t-fonta hover: rounded-md hover:dark:bg-bacg transition duration-500 hover:dark:text-kuning text-black text-[0.9rem] mt-3"
-              >
-                view Project
-              </a>
+          {datas.map((item, index) => (
+            <div
+              key={index}
+              className="flex-1  shadow-2xl rounded-2xl dark:bg-f-text transition-colors duration-500"
+            >
+              <img
+                src={item.gambar}
+                alt=""
+                className="w-full h-35 object-cover rounded-t-2xl bg-center "
+              />
+              <div className="flex flex-col items-center gap-2 mt-2 text-center mb-3">
+                <h1 className="text-[1.1rem] font-semi">{item.namaProject}</h1>
+                <h1 className="text-[0.8rem] px-6  w-[95%] overflow-hidden">
+                  {item.Deskripsi}
+                </h1>
+                <a
+                  href={item.link}
+                  className="px-4 py-1 dark:bg-kuning bg-t-fonta hover: rounded-md hover:dark:bg-bacg transition duration-500 hover:dark:text-kuning text-black text-[0.9rem] mt-3"
+                >
+                  view Project
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="flex-1  shadow-2xl rounded-2xl dark:bg-f-text transition-colors duration-500">
-            <img
-              src={tas}
-              alt=""
-              className="w-full h-35 object-cover rounded-t-2xl bg-center "
-            />
-            <div className="flex flex-col items-center gap-2 mt-2 text-center mb-3">
-              <h1 className="text-[1.1rem] font-semi">Toko Tas</h1>
-              <h1 className="text-[0.8rem] px-6  w-[95%] overflow-hidden">
-                sebuah web penjualan tas online toko Aura & co.
-              </h1>
-              <a
-                href="https://web-tas-h6ax.vercel.app/"
-                className="px-4 py-1 dark:bg-kuning bg-t-fonta hover: rounded-md hover:dark:bg-bacg transition duration-500 hover:dark:text-kuning text-black text-[0.9rem] mt-3"
-              >
-                view Project
-              </a>
-            </div>
-          </div>
-          <div className="flex-1  shadow-2xl rounded-2xl dark:bg-f-text transition-colors duration-500">
-            <img
-              src={tas}
-              alt=""
-              className="w-full h-35 object-cover rounded-t-2xl bg-center "
-            />
-            <div className="flex flex-col items-center gap-2 mt-2 text-center mb-3">
-              <h1 className="text-[1.1rem] font-semi">Toko Tas</h1>
-              <h1 className="text-[0.8rem] px-6  w-[95%] overflow-hidden">
-                sebuah web penjualan tas online toko Aura & co.
-              </h1>
-              <a
-                href="https://web-tas-h6ax.vercel.app/"
-                className="px-4 py-1 dark:bg-kuning bg-t-fonta hover: rounded-md hover:dark:bg-bacg transition duration-500 hover:dark:text-kuning text-black text-[0.9rem] mt-3"
-              >
-                view Project
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
