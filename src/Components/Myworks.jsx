@@ -49,7 +49,7 @@ const Myworks = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-5 md:gap-5 px-2 md:px-0 ">
           {datas.map((item, index) => (
-            <Zoom_in>
+            <Zoom_in className="w-full">
               <div
                 key={index}
                 className={`flex-1  shadow-2xl rounded-2xl dark:bg-f-text   

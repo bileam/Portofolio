@@ -13,7 +13,7 @@ const MySkill = () => {
           <h1 className="text-[1rem] dark:text-putih font-medium">My Skill</h1>
         </div>
         <div className="flex flex-col md:flex-row md:gap-2 gap-9">
-          <Zoom_in>
+          <Zoom_in className="w-full">
             <div className="w-full flex flex-col md:flex-1 items-center py-2 px-2  gap-1 rounded-md ">
               <img
                 src={js}
@@ -26,7 +26,7 @@ const MySkill = () => {
               </p>
             </div>
           </Zoom_in>
-          <Zoom_in>
+          <Zoom_in className="w-full">
             <div className="md:flex-1  w-full flex flex-col items-center py-2 px-2 gap-1 rounded-md">
               <img
                 src={react}
@@ -40,7 +40,7 @@ const MySkill = () => {
               </p>
             </div>
           </Zoom_in>
-          <Zoom_in>
+          <Zoom_in className="w-full">
             <div className="md:flex-1 w-full flex flex-col items-center py-2 px-2 gap-1 rounded-md">
               <img
                 src={tailwindcss}

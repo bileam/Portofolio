@@ -24,7 +24,7 @@ const Zoom_in = ({ children, className = "" }) => {
   return (
     <div
       ref={ref}
-      className={`opacity-0 w-full ${
+      className={`opacity-0  ${
         show ? "zoom-in" : ""
       } transition-all duration-700 ${className}`}
     >

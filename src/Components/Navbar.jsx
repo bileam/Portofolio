@@ -86,12 +86,12 @@ const Navbar = ({ isDark, setDark }) => {
             Works
           </Link>
           <Link
-            to="blog"
+            to="client"
             smooth={true}
             duration={500}
             className="cursor-pointer"
           >
-            Blog
+            Client
           </Link>
           <Link
             to="contact"
@@ -165,13 +165,13 @@ const Navbar = ({ isDark, setDark }) => {
             </Link>
             <Link
               onClick={() => setClick(!click)}
-              to="blog"
+              to="client"
               smooth={true}
               duration={500}
               activeClass="border-b dark:border-kuning w-20 dark:text-kuning  text-f-text"
               className="cursor-pointer"
             >
-              Blog
+              Client
             </Link>
             <Link
               onClick={() => setClick(!click)}
