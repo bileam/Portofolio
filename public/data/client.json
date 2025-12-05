@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "bileam mangalla",
+    "image": "/Gambar/person_1.jpeg",
+    "message": " pengerjaanya keren bangat terimakasih Lorem ipsum, dolor sit amet  consectetur adipisicing elit."
+  },
+  {
+    "id": 2,
+    "name": "Renol",
+    "image": "/Gambar/person_2.png",
+    "message": " pengerjaanya keren bangat terimakasih Lorem ipsum, sangat berharga bagi saya"
+  },
+  {
+    "id": 1,
+    "name": "Mutia",
+    "image": "/Gambar/person_3.png",
+    "message": "saya sangat senang yang di buatkan, terimakasih"
+  }
+]

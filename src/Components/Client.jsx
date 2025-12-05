@@ -1,6 +1,14 @@
+import { useEffect, useState } from "react";
 import Zoom_in from "./Animasi/Zoom_in";
 
 const Client = () => {
+  const [datas, setDatas] = useState([]);
+  useState(() => {
+    fetch("/data/client.json")
+      .then((res) => res.json())
+      .then((result) => setDatas(result))
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <div
       id="client"
@@ -17,51 +25,19 @@ const Client = () => {
           </a>
         </div>
         <div className=" w-full mt-5 flex gap-5 flex-wrap justify-center  transition-all duration-700">
-          <Zoom_in className="dark:bg-f-text max-w-[47%] md:max-w-[31%]   rounded-2xl flex flex-col items-center py-6 gap-2 shadow-lg">
-            <img
-              src=""
-              alt=""
-              className="w-15 border rounded-full h-15  object-cover bg-center"
-            />
-            <h1 className="text-[0.9rem] font-semibold">bileam mangalla</h1>
-            <p className="max-w-[99%]  overflow-hidden max-h-30 text-center text-[0.8rem]">
-              pengerjaanya keren bangat terimakasih Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Facere consequatur, placeat
-              quibusdam eum quod aspernatur voluptatem omnis in eius, labore
-              cumque officiis aperiam! Asperiores, sapiente sed cumque deserunt
-              ipsa nisi!
-            </p>
-          </Zoom_in>
-          <Zoom_in className="dark:bg-f-text max-w-[47%] md:max-w-[31%]  rounded-2xl flex flex-col items-center py-6 gap-2 shadow-lg">
-            <img
-              src=""
-              alt=""
-              className="w-15 border rounded-full h-15  object-cover bg-center"
-            />
-            <h1 className="text-[0.9rem] font-semibold">bileam mangalla</h1>
-            <p className="max-w-[99%]  overflow-hidden max-h-30 text-center text-[0.8rem]">
-              pengerjaanya keren bangat terimakasih Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Facere consequatur, placeat
-              quibusdam eum quod aspernatur voluptatem omnis in eius, labore
-              cumque officiis aperiam! Asperiores, sapiente sed cumque deserunt
-              ipsa nisi!
-            </p>
-          </Zoom_in>
-          <Zoom_in className="dark:bg-f-text max-w-[47%] md:max-w-[31%]  rounded-2xl flex flex-col items-center py-6 gap-2 shadow-lg">
-            <img
-              src=""
-              alt=""
-              className="w-15 border rounded-full h-15  object-cover bg-center"
-            />
-            <h1 className="text-[0.9rem] font-semibold">bileam mangalla</h1>
-            <p className="max-w-[99%]  overflow-hidden max-h-30 text-center text-[0.8rem]">
-              pengerjaanya keren bangat terimakasih Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Facere consequatur, placeat
-              quibusdam eum quod aspernatur voluptatem omnis in eius, labore
-              cumque officiis aperiam! Asperiores, sapiente sed cumque deserunt
-              ipsa nisi!
-            </p>
-          </Zoom_in>
+          {datas.map((item, index) => (
+            <Zoom_in className="dark:bg-f-text max-w-[47%] md:max-w-[31%]   rounded-2xl flex flex-col items-center py-6 gap-2 shadow-lg">
+              <img
+                src={item.image}
+                alt=""
+                className="w-15 md:w-30 md:h-30  rounded-full h-15  object-cover bg-center"
+              />
+              <h1 className="text-[0.9rem] font-semibold">{item.name}</h1>
+              <p className="max-w-[99%]  overflow-hidden max-h-30 text-center text-[0.8rem]">
+                {item.message}
+              </p>
+            </Zoom_in>
+          ))}
         </div>
       </div>
     </div>
