@@ -34,6 +34,25 @@ opacity: 1 → fully terlihat */
     opacity: 1;
   }
 }
+
+
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(280deg);
+  }
+}
+
+
+.animate-rotateY {
+  animation: rotateY 10s linear infinite;
+  transform-style: preserve-3d;
+}
+
+
+
 /* .dark {
   transition: background-color 0.9s ease, color 0.9s ease;
 } */

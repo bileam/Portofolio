@@ -9,13 +9,13 @@ const Home = () => {
       <div className="flex md:flex-row flex-col ">
         <div className="flex flex-col flex-1 gap-5 order-2 md:order-1">
           <Zoom_in>
-            <h1 className="dark:text-kuning font-bold text-center md:text-start w-[90%] md:w-[60%]  text-[1.9rem] md:text-[2.4rem]">
-              hi i'am bileam web developer
+            <h1 className="dark:text-kuning  font-bold text-center md:text-start w-[90%] md:w-[60%]  text-[1.9rem] md:text-[2.4rem]">
+              hi i'am bileam <span className="typing">web developer</span>
             </h1>
           </Zoom_in>
 
           <Zoom_in>
-            <p className="dark:text-t-fonta md:text-[1rem] text-[0.8rem]  md:text-start text-justify  w-[90%]">
+            <p className="dark:text-t-fonta md:text-[1rem] text-[0.8rem]   md:text-start text-justify  w-[90%]">
               Hallo.. Nama saya bileam mangalla, saya lahir di toraja
               09-januari-2003, jika di jumlahkan sekarang umur saya 22 Tahun,
               saya lulusan S1 Teknik Informatika di Universitas Kristen Satya

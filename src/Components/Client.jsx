@@ -26,11 +26,11 @@ const Client = () => {
         </div>
         <div className=" w-full mt-5 flex gap-5 flex-wrap justify-center  transition-all duration-700">
           {datas.map((item, index) => (
-            <Zoom_in className="dark:bg-f-text max-w-[47%] md:max-w-[31%]   rounded-2xl flex flex-col items-center py-6 gap-2 shadow-lg">
+            <Zoom_in className="dark:bg-f-text max-w-[47%] md:w-[31%]     rounded-2xl flex flex-col items-center py-6     gap-2 shadow-lg">
               <img
                 src={item.image}
                 alt=""
-                className="w-15 md:w-30 md:h-30  rounded-full h-15  object-cover bg-center"
+                className="w-15 md:w-30 md:h-30  rounded-full h-15 animate-rotateY  object-cover bg-center"
               />
               <h1 className="text-[0.9rem] font-semibold">{item.name}</h1>
               <p className="max-w-[99%]  overflow-hidden max-h-30 text-center text-[0.8rem]">
