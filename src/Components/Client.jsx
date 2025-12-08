@@ -12,9 +12,9 @@ const Client = () => {
   return (
     <div
       id="client"
-      className="md:container py-25 md:py-25 font-sans   mx-auto dark:text-t-fonta  px-5 lg:px-10 flex   min-h-200 md:min-h-auto  "
+      className="md:container min-h-screen pt-25  md:py-25 font-sans   mx-auto dark:text-t-fonta  px-5 lg:px-10 flex   md:min-h-auto  "
     >
-      <div className="flex flex-col w-full gap-5 ">
+      <div className="flex flex-col w-full  gap-5 ">
         <div className="w-full flex justify-between">
           <h1 className="text-[1.2rem]">My Clients</h1>
           <a
@@ -24,7 +24,7 @@ const Client = () => {
             See All
           </a>
         </div>
-        <div className=" w-full mt-5 flex gap-5 flex-wrap justify-center  transition-all duration-700">
+        <div className=" w-full  mt-5 flex gap-5 flex-wrap justify-center  transition-all duration-700">
           {datas.map((item, index) => (
             <Zoom_in className="dark:bg-f-text max-w-[47%] md:w-[31%]     rounded-2xl flex flex-col items-center py-6     gap-2 shadow-lg">
               <img

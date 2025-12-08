@@ -94,7 +94,7 @@ const Navbar = ({ isDark, setDark }) => {
             Client
           </Link>
           <Link
-            to="contact"
+            to="contect"
             smooth={true}
             duration={500}
             className="cursor-pointer"
@@ -175,7 +175,7 @@ const Navbar = ({ isDark, setDark }) => {
             </Link>
             <Link
               onClick={() => setClick(!click)}
-              to="contact"
+              to="contect"
               smooth={true}
               duration={500}
               activeClass="border-b dark:border-kuning w-20 dark:text-kuning  text-f-text"
