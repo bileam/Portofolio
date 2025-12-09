@@ -16,15 +16,15 @@
 
 /* membuat class Tailwind baru */
 @utility zoom-in {
-  animation: zoomIn 1.5s ease-out forwards;
+  animation: zoomIn 1.7s ease-out forwards;
 }
 
 /* scale: 0.8 → elemen lebih kecil (80%)
-opacity: 0 → elemen tidak terlihat (transparan)
+opacity: 0 → elemen tidak terlihat (transparan)2
  */
 @keyframes zoomIn {
   0% {
-    scale: 0.8;
+    scale: 0.9;
     opacity: 0;
   }
   /* scale: 1 → ukuran normal

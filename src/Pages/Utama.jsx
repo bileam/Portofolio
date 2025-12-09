@@ -6,6 +6,7 @@ import MySkill from "../Components/MySkill";
 import Myworks from "../Components/Myworks";
 import Client from "../Components/Client";
 import Contect from "../Components/Contect";
+import Footer from "../Components/Footer";
 
 const Utama = () => {
   const [isDark, setDark] = useState(true);
@@ -19,6 +20,7 @@ const Utama = () => {
         <Myworks />
         <Client />
         <Contect />
+        <Footer />
       </div>
     </div>
   );
