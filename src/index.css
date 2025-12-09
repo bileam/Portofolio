@@ -53,6 +53,12 @@ opacity: 1 → fully terlihat */
 }
 
 
+@layer utilities {
+  .text-shadow-bro {
+    text-shadow: 0 0 12px rgba(168, 85, 247, 1); /* purple-500 */
+  }
+}
+
 
 /* .dark {
   transition: background-color 0.9s ease, color 0.9s ease;
