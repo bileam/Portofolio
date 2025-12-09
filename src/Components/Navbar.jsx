@@ -16,13 +16,13 @@ const Navbar = ({ isDark, setDark }) => {
         <div className="flex items-center justify-between  w-full md:w-auto pr-2 md:pr-0">
           <h1 className="text-kuning text-[1.5rem] font-semibold">.Bileam</h1>
           <div className="flex items-center gap-3">
-            <button
+            {/* <button
               onClick={() => setDark(!isDark)}
               className="px-1 bg-f-text rounded-full transition-all duration-700 md:hidden"
             >
               {" "}
               {isDark ? "🌙" : "☀️"}
-            </button>
+            </button> */}
             <button
               onClick={() => setClick(!click)}
               className="md:hidden flex flex-col gap-1 cursor-pointer"
@@ -73,6 +73,7 @@ const Navbar = ({ isDark, setDark }) => {
             duration={500}
             activeClass="border-b border-kuning"
             spy={true}
+            // offset={-50}
             className="cursor-pointer"
           >
             Skill
@@ -81,6 +82,9 @@ const Navbar = ({ isDark, setDark }) => {
             to="workss"
             smooth={true}
             duration={500}
+            activeClass="border-b border-kuning"
+            spy={true}
+            // offset={-50}
             className="cursor-pointer"
           >
             Works
@@ -89,6 +93,9 @@ const Navbar = ({ isDark, setDark }) => {
             to="client"
             smooth={true}
             duration={500}
+            activeClass="border-b border-kuning"
+            spy={true}
+            // offset={-50}
             className="cursor-pointer"
           >
             Client
@@ -97,16 +104,19 @@ const Navbar = ({ isDark, setDark }) => {
             to="contect"
             smooth={true}
             duration={500}
+            activeClass="border-b border-kuning"
+            spy={true}
+            // offset={-50}
             className="cursor-pointer"
           >
             Contact
           </Link>
-          <button
+          {/* <button
             onClick={() => setDark(!isDark)}
             className="px-1 rounded-full ring-1 bg-f-text dark:bg-none md:flex hidden transition-all duration-700 "
           >
             {isDark ? "🌙" : "☀️"}
-          </button>
+          </button> */}
         </div>
         <div
           className={`

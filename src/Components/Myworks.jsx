@@ -69,6 +69,7 @@ const Myworks = () => {
                   </h1>
                   <a
                     href={item.link}
+                    target="_blank"
                     className="px-4 py-1 dark:bg-kuning bg-t-fonta hover: rounded-md hover:dark:bg-bacg transition duration-500 hover:dark:text-kuning text-black text-[0.9rem] mt-3"
                   >
                     view Project
