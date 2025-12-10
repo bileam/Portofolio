@@ -17,7 +17,7 @@ const Utama = () => {
         <Navbar isDark={isDark} setDark={setDark} />
         <Home />
         <About />
-        <MySkill />
+        {/* <MySkill /> */}
         <Latihan />
         <Myworks />
         <Client />
