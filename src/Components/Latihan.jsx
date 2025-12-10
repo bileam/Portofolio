@@ -97,12 +97,12 @@ const Latihan = () => {
                    : "translate-y-full "
                } 
 
-            md:group-hover:delay-300 delay-0 duration-700 absolute inset-0 transition-transform ease-in-out  bg-black/30`}
+            md:group-hover:delay-300 delay-0 duration-700 absolute inset-0 transition-transform ease-in-out  bg-black/40`}
               >
                 <div className="relative w-full h-full flex-col flex items-center p-3 justify-center">
                   <img src={item.gambar} alt="" className="w-20" />
                   <h1 className="text-[1.5rem]">Java Script</h1>
-                  <p className="text-justify max-w-[95%] overflow-hidden text-[0.9rem] ">
+                  <p className="text-stars max-w-[95%] overflow-hidden text-[0.9rem] ">
                     {item.deskripsi}
                   </p>
                 </div>
