@@ -1,0 +1,23 @@
+import gambar from "../assets/javasript.svg";
+import tailwindcss from "../assets/logo_tailwincss.svg";
+import react from "../assets/react.svg";
+export const Skil = [
+  {
+    nama: "Java Script",
+    gambar: gambar,
+    deskripsi:
+      "  JavaScript (JS) adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif, dinamis, dan hidup. Jika HTML adalah kerangka, dan CSS adalah tampilan, maka  JavaScript adalah otak yang membuat website bisa bergerak dan merespons pengguna.",
+  },
+  {
+    nama: "React js",
+    gambar: react,
+    deskripsi:
+      "React.js adalah library JavaScript yang digunakan untuk membangun user interface (UI) pada aplikasi web. React dibuat oleh Facebook (sekarang Meta) dan sangat populer karena cepat, fleksibel, dan mudah digunakan. Dengan React, kamu dapat membuat tampilan web berupa komponen—bagian-bagian kecil UI yang bisa digunakan ulang, seperti tombol, card, navbar, form, dll.",
+  },
+  {
+    nama: "TailwindCss",
+    gambar: tailwindcss,
+    deskripsi:
+      "Tailwind CSS adalah utility-first CSS framework yang menyediakan kelas-kelas kecil siap pakai untuk membuat tampilan website secara cepat dan fleksibel. Berbeda dengan framework lain seperti Bootstrap yang menyediakan komponen jadi (navbar, card, modal), Tailwind memberi kamu kebebasan penuh melalui kelas-kelas utility",
+  },
+];

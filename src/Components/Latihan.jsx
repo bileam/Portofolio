@@ -4,6 +4,7 @@ import tailwindcss from "../assets/logo_tailwincss.svg";
 import react from "../assets/react.svg";
 import { useRef } from "react";
 import { useEffect } from "react";
+import { Skil } from "../dataArray/Skil";
 const Latihan = () => {
   const [cleck, setCleck] = useState(null);
   const cardRef = useRef(null);
@@ -43,61 +44,73 @@ const Latihan = () => {
       </div>
       <div className="flex flex-col mt-20 mb-[50%] gap-40 ">
         {/* Item 1 kiri */}
-        <div
-          onClick={() => handleClik(1)}
-          style={{ backgroundImage: `url(${gambar})` }}
-          className={`md:w-[50%] w-full  overflow-hidden relative group      h-80    dark:bg-f-text self-start z-1`}
-        >
-          <div className="flex flex-col justify-end h-full relative ">
-            <div
-              className={`absolute text-[4rem]
+        {Skil.map((item, index) => (
+          <div
+            onClick={() => handleClik(index)}
+            style={{ backgroundImage: `url(${gambar})` }}
+            className={`md:w-[50%] w-full  overflow-hidden relative group      h-80    dark:bg-f-text  
+            
+           ${index == 0 ? "self-start" : "self-center"}
+           ${index == 2 ? "self-start" : "self-center"}
+
+            z-1`}
+          >
+            <div className="flex flex-col justify-end h-full relative ">
+              <div
+                className={`absolute text-[4rem]
               ${
-                cleck === 1
+                cleck === index
                   ? "scale-100 transition-all duration-500 ease-in-out"
                   : ""
               }
                md:group-hover:scale-125  transition-all duration-700 -translate-y-[150%] text-purple-400 group-hover:text-shadow-purple   w-full flex justify-center`}
-            >
-              <h1 className="md:hidden   text-[3rem] w-100 flex justify-center  ">
-                {cleck === 1 ? (
-                  <span className={`shadow-2xl shadow-purple-400 rounded-full`}>
-                    Omaigattt!!!
-                  </span>
-                ) : (
-                  <span> Don't Cleck</span>
-                )}
-              </h1>
-              <h1 className="hidden md:block">Hover Me</h1>
-            </div>
-            <div
-              className={`md:group-hover:-translate-y-100 ${
-                cleck === 1 ? "-translate-y-100 delay-0 " : "delay-300"
-              }  md:group-hover:delay-0  flex flex-col items-center pb-5  md:delay-300
+              >
+                <h1 className="md:hidden   text-[3rem] w-100 flex justify-center  ">
+                  {cleck === index ? (
+                    <span
+                      className={`shadow-2xl shadow-purple-400 rounded-full`}
+                    >
+                      Omaigattt!!!
+                    </span>
+                  ) : (
+                    <span> Don't Cleck</span>
+                  )}
+                </h1>
+                <h1 className="hidden md:block">Hover Me</h1>
+              </div>
+              <div
+                className={`md:group-hover:-translate-y-100 ${
+                  cleck === index ? "-translate-y-100 delay-0 " : "delay-300"
+                }  md:group-hover:delay-0  flex flex-col items-center pb-5  md:delay-300
               transition-all  duration-700 ease-in-out`}
-            >
-              <h1 className=" font-mono relative text-[1.5rem]">JavaScript</h1>
-            </div>
-            <div
-              className={`md:group-hover:translate-y-0 
+              >
+                <h1 className=" font-mono relative text-[1.5rem]">
+                  {item.nama}
+                </h1>
+              </div>
+              <div
+                className={`md:group-hover:translate-y-0 
                md:translate-y-full 
-               ${cleck === 1 ? "translate-y-0 delay-300" : "translate-y-full "} 
+               ${
+                 cleck === index
+                   ? "translate-y-0 delay-300"
+                   : "translate-y-full "
+               } 
 
             md:group-hover:delay-300 delay-0 duration-700 absolute inset-0 transition-transform ease-in-out  bg-purple-400/20 rounded-2xl `}
-            >
-              <div className="relative w-full h-full flex-col flex items-center p-3 justify-center">
-                <img src={gambar} alt="" className="w-20" />
-                <h1 className="text-[1.5rem]">Java Script</h1>
-                <p className="text-justify max-w-[95%] overflow-hidden text-[0.9rem]">
-                  JavaScript (JS) adalah bahasa pemrograman yang digunakan untuk
-                  membuat halaman web menjadi interaktif, dinamis, dan hidup.
-                  Jika HTML adalah kerangka, dan CSS adalah tampilan, maka
-                  JavaScript adalah otak yang membuat website bisa bergerak dan
-                  merespons pengguna.
-                </p>
+              >
+                <div className="relative w-full h-full flex-col flex items-center p-3 justify-center">
+                  <img src={item.gambar} alt="" className="w-20" />
+                  <h1 className="text-[1.5rem]">Java Script</h1>
+                  <p className="text-justify max-w-[95%] overflow-hidden text-[0.9rem] ">
+                    {item.deskripsi}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        ))}
+
         {/* dua */}
         {/* <div
           onClick={() => handleClik(2)}
