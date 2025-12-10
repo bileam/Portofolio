@@ -18,7 +18,7 @@ const Utama = () => {
         <Home />
         <About />
         <MySkill />
-        {/* <Latihan /> */}
+        <Latihan />
         <Myworks />
         <Client />
         <Contect />

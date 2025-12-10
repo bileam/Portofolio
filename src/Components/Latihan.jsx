@@ -99,7 +99,7 @@ const Latihan = () => {
           </div>
         </div>
         {/* dua */}
-        <div
+        {/* <div
           onClick={() => handleClik(2)}
           style={{ backgroundImage: `url(${gambar})` }}
           className={`md:w-[50%] w-full  overflow-hidden relative group      h-80    dark:bg-f-text self-center z-1`}
@@ -155,9 +155,9 @@ const Latihan = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* tiga */}
-        <div
+        {/* <div
           onClick={() => handleClik(3)}
           style={{ backgroundImage: `url(${gambar})` }}
           className={`md:w-[50%] w-full  overflow-hidden relative group      h-80    dark:bg-f-text self-stars z-1`}
@@ -212,7 +212,7 @@ const Latihan = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
