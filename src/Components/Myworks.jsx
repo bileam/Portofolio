@@ -49,7 +49,7 @@ const Myworks = () => {
           </button>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-5 md:gap-5 px-2 md:px-0 ">
+        <div className="flex flex-col md:flex-wrap md:flex-row gap-5 md:gap-5 px-2 md:px-0 ">
           {/* {datas.map((item, index) => (
             <Zoom_in className="w-full">
               <div
@@ -81,7 +81,7 @@ const Myworks = () => {
             </Zoom_in>
           ))} */}
           {datas.map((item, index) => (
-            <div className="flex  group  h-100  overflow-hidden w-full scale-100">
+            <div className="flex md:w-[32%] flex-1 mx-auto group bg-linear-to-r from-transparent to-transparent  h-100 transition-all duration-700 ease-in-out  overflow-hidden w-full scale-100">
               <div className=" relative flex items-center justify-center ">
                 <img
                   src={tas}
@@ -89,7 +89,10 @@ const Myworks = () => {
                   alt=""
                   className="w-full h-full object-cover group-hover:scale-105 group-hover:opacity-0 group-hover:delay-0  duration-500 transition "
                 />
-                <div className="absolute inset-0 group-hover:bg-black/50 group-hover:delay-200 duration-300 transition-colors">
+                <div
+                  className="absolute inset-0      bg-transparent group-hover:bg-black/10 group-hover:backdrop-blur-sm
+    group-hover:shadow-[0_0_40px_rgba(0,0,0,0.4)] group-hover:delay-200 duration-300 transition-all"
+                >
                   <div className=" mt-15 flex flex-col group-hover:scale-110 duration-500 transition group-hover:delay-300 ease-in-out ">
                     <h1 className="font-extrabold pl-10 text-white">
                       {item.namaProject}
