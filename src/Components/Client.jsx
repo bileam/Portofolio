@@ -25,7 +25,7 @@ const Client = () => {
           </a>
         </div>
         <div className="overflow-hidden whitespace-nowrap">
-          <div className=" w-full animate-slide-left hover:pause-animation  mt-5 flex md:gap-10 gap-5 flex-wrap justify-center  transition-all duration-700">
+          <div className=" w-full animate-slide-left hover:pause-animation  mt-5 flex md:gap-10 gap-5 justify-center  transition-all duration-700">
             {datas.map((item, index) => (
               <Zoom_in className="dark:bg-f-text max-w-[47%] md:w-[31%]  hover:scale-110   rounded-2xl flex flex-col items-center py-6     gap-2 shadow-lg">
                 <img
