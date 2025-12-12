@@ -23,16 +23,16 @@
 @layer utilities {
   @keyframes slide-left {
     0% {
-      transform: translateX(0);
+      transform: translateX(100%);
     }
    
     100% {
-      transform: translateX(-60%);
+      transform: translateX(-100%);
     }
   }
 
   .animate-slide-left {
-    animation: slide-left 10s linear infinite;
+    animation: slide-left 30s linear infinite;
   }
   
   .hover\:pause-animation:hover {
