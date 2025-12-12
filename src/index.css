@@ -16,7 +16,28 @@
 
 /* membuat class Tailwind baru */
 @utility zoom-in {
-  animation: zoomIn 1.7s ease-out forwards;
+  animation: zoomIn 1.5s ease-out forwards;
+}
+
+/* geser ke kiri */
+@layer utilities {
+  @keyframes slide-left {
+    0% {
+      transform: translateX(90%);
+    }
+   
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-slide-left {
+    animation: slide-left 30s linear infinite;
+  }
+  
+  .hover\:pause-animation:hover {
+    animation-play-state: paused;
+  }
 }
 
 /* scale: 0.8 → elemen lebih kecil (80%)
@@ -35,6 +56,8 @@ opacity: 1 → fully terlihat */
     opacity: 1;
   }
 }
+
+
 
 
 @keyframes rotateY {
@@ -58,6 +81,32 @@ opacity: 1 → fully terlihat */
     text-shadow: 0 0 12px rgba(168, 85, 247, 1); /* purple-500 */
   }
 }
+
+
+/* belajar membuat animasi
+tahap:
+1. mendefinisikan animasi baru dengan namanya menggunakan 
+@keyframes nama_animasi
+2. membuat class tailwindcss baru untuk di pake seperti class lain di tailwindcss
+@utility namaClassbaru{
+animation: nama animasi baru .times(s) -> 5 detik
+ -> cubic-bezier(.22,.9,.32,1) -> agar lebih smooth
+ forwards
+Setelah animasi selesai, posisi akhir tetap dipertahankan.
+cara menggunakan 
+1. contoh
+
+@keyframe zoom_in {
+0%{transform :scale(0.8);opacity:0}->kondisi element saat awal animasi
+100%{transform :scale(1);opacity:1} ->elemen diperbesar kembali menjadi normal
+}
+
+selanjutnya buat class tailwindcss
+@utility animate-zoom-in {
+  animation: zoom-in .5s cubic-bezier(.22,.9,.32,1) forwards; -> zoom-in selamat 0.5detik
+}
+}
+*/
 
 
 /* .dark {

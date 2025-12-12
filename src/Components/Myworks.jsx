@@ -3,6 +3,7 @@ import tas from "../assets/Gambar/Tas.png";
 import { useEffect } from "react";
 import { useRef } from "react";
 import Zoom_in from "./Animasi/Zoom_in";
+import Tas from "../assets/Gambar/Tas.png";
 
 const Myworks = () => {
   const [datas, setDatas] = useState([]);
@@ -47,8 +48,9 @@ const Myworks = () => {
             see all
           </button>
         </div>
+
         <div className="flex flex-col md:flex-row gap-5 md:gap-5 px-2 md:px-0 ">
-          {datas.map((item, index) => (
+          {/* {datas.map((item, index) => (
             <Zoom_in className="w-full">
               <div
                 key={index}
@@ -77,6 +79,43 @@ const Myworks = () => {
                 </div>
               </div>
             </Zoom_in>
+          ))} */}
+          {datas.map((item, index) => (
+            <div className="flex  group  h-100  overflow-hidden w-full scale-100">
+              <div className=" relative flex items-center justify-center ">
+                <img
+                  src={tas}
+                  // src={item.gambar}
+                  alt=""
+                  className="w-full h-full object-cover group-hover:scale-105 group-hover:opacity-0 group-hover:delay-0  duration-500 transition "
+                />
+                <div className="absolute inset-0 group-hover:bg-black/50 group-hover:delay-200 duration-300 transition-colors">
+                  <div className=" mt-15 flex flex-col group-hover:scale-110 duration-500 transition group-hover:delay-300 ease-in-out ">
+                    <h1 className="font-extrabold pl-10 text-white">
+                      {item.namaProject}
+                    </h1>
+                    <h1 className="font-semibold pl-15 text-white">
+                      Penjualan Tas
+                    </h1>
+                  </div>
+                  <div className="  mt-20 px-3 -translate-x-full  max-h-20 overflow-hidden group-hover:translate-x-0 transition duration-500 ease-in-out group-hover:delay-300">
+                    <p className="text-[0.7rem]    text-white">
+                      {item.Deskripsi}
+                    </p>
+                  </div>
+                  <div className="absolute group/item   max-w-23 overflow-hidden bottom-7 translate-y-20 group-hover:translate-y-0  transition duration-500 group-hover:delay-700 right-7 text-white gap-1 flex-col flex">
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      className=" text-[0.9rem]"
+                    >
+                      Lihat project
+                    </a>
+                    <div className="border-b-2 w-20 -translate-full group-hover/item:translate-0 transition duration-500 ease-in delay-200"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>

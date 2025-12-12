@@ -5,10 +5,26 @@ import react from "../assets/react.svg";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { Skil } from "../dataArray/Skil";
+import Zoom_in from "./Animasi/Zoom_in";
 const Latihan = () => {
   const [cleck, setCleck] = useState(null);
   const cardRef = useRef(null);
+  const [datas, setDatas] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const getData = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/skill/get");
+      const result = await response.json();
+      setDatas(result);
+      setLoading(false);
+    } catch (error) {
+      console.log("error terjadi", error);
+      setLoading(false);
+    }
+  };
   useEffect(() => {
+    getData();
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) {
@@ -17,9 +33,7 @@ const Latihan = () => {
       },
       { threshold: 0.3 } // 10% terlihat dianggap “hadir”
     );
-
     if (cardRef.current) observer.observe(cardRef.current);
-
     return () => {
       if (cardRef.current) observer.unobserve(cardRef.current);
     };
@@ -30,6 +44,7 @@ const Latihan = () => {
       setCleck(cleck === id ? null : id);
     }
   };
+  console.log(datas);
   return (
     <div
       ref={cardRef}
@@ -101,9 +116,10 @@ const Latihan = () => {
               >
                 <div className="relative w-full h-full flex-col flex items-center p-3 justify-center">
                   <img src={item.gambar} alt="" className="w-20" />
-                  <h1 className="text-[1.5rem]">Java Script</h1>
+                  <h1 className="text-[1.5rem]">{item.nama}</h1>
                   <p className="text-stars max-w-[95%] overflow-hidden text-[0.9rem] ">
                     {item.deskripsi}
+                    {/* {item.deskripsi} */}
                   </p>
                 </div>
               </div>

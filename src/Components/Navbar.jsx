@@ -42,6 +42,7 @@ const Navbar = ({ isDark, setDark }) => {
                   click ? "-translate-y-2 -rotate-45" : ""
                 } `}
               ></div>
+             
             </button>
           </div>
         </div>
