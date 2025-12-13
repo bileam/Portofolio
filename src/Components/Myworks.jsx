@@ -33,7 +33,7 @@ const Myworks = () => {
     return () => observer.disconnect();
   }, []);
 
-  console.log(datas);
+  // console.log(datas);
   return (
     <div
       ref={ref}
@@ -81,7 +81,10 @@ const Myworks = () => {
             </Zoom_in>
           ))} */}
           {datas.map((item, index) => (
-            <div className="flex md:w-[32%] flex-1 mx-auto group bg-linear-to-r from-transparent to-transparent  h-100 transition-all duration-700 ease-in-out  overflow-hidden w-full scale-100">
+            <div
+              key={index}
+              className="flex md:w-[32%] flex-1 mx-auto group bg-linear-to-r from-transparent to-transparent  h-100 transition-all duration-700 ease-in-out  overflow-hidden w-full scale-100"
+            >
               <div className=" relative flex items-center justify-center ">
                 <img
                   src={tas}
@@ -91,7 +94,7 @@ const Myworks = () => {
                 />
                 <div
                   className="absolute inset-0      bg-transparent group-hover:bg-black/10 group-hover:backdrop-blur-sm
-    group-hover:shadow-[0_0_40px_rgba(0,0,0,0.4)] group-hover:delay-200 duration-300 transition-all"
+                   group-hover:shadow-[0_0_40px_rgba(0,0,0,0.4)] group-hover:delay-200 duration-300 transition-all"
                 >
                   <div className=" mt-15 flex flex-col group-hover:scale-110 duration-500 transition group-hover:delay-300 ease-in-out ">
                     <h1 className="font-extrabold pl-10 text-white">
@@ -114,7 +117,7 @@ const Myworks = () => {
                     >
                       Lihat project
                     </a>
-                    <div className="border-b-2 w-20 -translate-full group-hover/item:translate-0 transition duration-500 ease-in delay-200"></div>
+                    <div className="border-b-2 w-20  -translate-full group-hover/item:translate-0 transition duration-500 ease-in delay-200"></div>
                   </div>
                 </div>
               </div>

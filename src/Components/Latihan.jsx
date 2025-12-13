@@ -13,15 +13,15 @@ const Latihan = () => {
   const [loading, setLoading] = useState(true);
 
   const getData = async () => {
-    try {
-      const response = await fetch("http://localhost:3000/skill/get");
-      const result = await response.json();
-      setDatas(result);
-      setLoading(false);
-    } catch (error) {
-      console.log("error terjadi", error);
-      setLoading(false);
-    }
+    // try {
+    //   const response = await fetch("http://localhost:3000/skill/get");
+    //   const result = await response.json();
+    //   setDatas(result);
+    //   setLoading(false);
+    // } catch (error) {
+    //   console.log("error terjadi", error);
+    //   setLoading(false);
+    // }
   };
   useEffect(() => {
     getData();
@@ -44,10 +44,11 @@ const Latihan = () => {
       setCleck(cleck === id ? null : id);
     }
   };
-  console.log(datas);
+
   return (
     <div
       ref={cardRef}
+      id="skille"
       className="min-h-screen px-10   flex flex-col  text-white md:container  mx-auto relative"
     >
       {/* <div className="sticky text-white inset-x-5 border  top-[50%] bottom-0">
@@ -61,6 +62,7 @@ const Latihan = () => {
         {/* Item 1 kiri */}
         {Skil.map((item, index) => (
           <div
+            key={index}
             onClick={() => handleClik(index)}
             style={{ backgroundImage: `url(${gambar})` }}
             className={`md:w-[50%] w-full  overflow-hidden relative group      h-80    dark:bg-f-text  

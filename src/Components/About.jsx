@@ -15,15 +15,15 @@ const About = () => {
             <div className="flex justify-between">
               <img
                 src={js}
-                className=" animate-bounce overflow-hidden  md:group-hover:-translate-y-10 -translate-y-5   md:opacity-0 group-hover:opacity-100 transition-all duration-500 md:w-9  object-contain w-7 md:object-contain"
+                className=" animate-bounce overflow-hidden  md:group-hover:-translate-y-10 -translate-y-5    group-hover:opacity-100 transition-all duration-500 md:w-9  object-contain w-7 md:object-contain"
               />
               <img
                 src={tailwind}
-                className="animate-bounce overflow-hidden md:group-hover:-translate-y-16 -translate-y-13 transition-all duration-700 md:opacity-0 group-hover:opacity-100 md:w-9  object-contain w-7 md:object-contain"
+                className="animate-bounce overflow-hidden md:group-hover:-translate-y-16 -translate-y-13 transition-all duration-700 group-hover:opacity-100 md:w-9  object-contain w-7 md:object-contain"
               />
               <img
                 src={react}
-                className="animate-bounce overflow-hidden md:group-hover:-translate-y-10 -translate-y-5 transition-all  duration-1000 md:opacity-0 group-hover:opacity-100 md:w-10 object-contain w-7 md:object-contain"
+                className="animate-bounce overflow-hidden md:group-hover:-translate-y-10 -translate-y-5 transition-all  duration-1000  group-hover:opacity-100 md:w-10 object-contain w-7 md:object-contain"
               />
             </div>
             <img src={gambar} alt="" className="object-cover md:w-auto w-65" />
