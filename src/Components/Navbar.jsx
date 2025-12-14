@@ -14,7 +14,19 @@ const Navbar = ({ isDark, setDark }) => {
     <nav className="md:container   mx-auto py-4 px-3 lg:px-10 fixed top-0 right-0 left-0 z-100 dark:bg-bacg">
       <div className="flex md:flex-row relative  justify-between md:items-center md:dark:bg-bacg md:rounded-full p-2">
         <div className="flex items-center justify-between  w-full md:w-auto pr-2 md:pr-0">
-          <h1 className="text-kuning text-[1.5rem] font-semibold">.Bileam</h1>
+          {/* <h1 className="text-kuning text-[1.5rem] font-semibold">.Bileam</h1>
+           */}
+          <div className="text-red-500 relative group text-[1.5rem] font-mono flex justify-center font-semibold  max-w-25 overflow-hidden ">
+            <span className=" transition-all duration-500 md:-translate-x-1 group-hover:translate-0 group-hover:delay-600 delay-900">
+              .B
+            </span>
+            <div className="border-2 md:block hidden group-hover:opacity-0 group-hover:delay-0 delay-1500 transition-opacity duration-200 border-kuning w-8 rounded-full  h-7 left-0 top-1 absolute"></div>
+            <span className="translate-x- inline-block  max-w-15 overflow-hidden">
+              <span className="inline-block md:text-red-500 md:-translate-x-full text-[0.9rem]  group-hover:delay-1200 delay-200 group-hover:translate-0 transition-transform duration-500 ease-in-out">
+                ileam
+              </span>
+            </span>
+          </div>
           <div className="flex items-center gap-3">
             {/* <button
               onClick={() => setDark(!isDark)}
