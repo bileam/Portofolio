@@ -8,6 +8,7 @@ import Tas from "../assets/Gambar/Tas.png";
 const Myworks = () => {
   const [datas, setDatas] = useState([]);
   const [cleck, setcleck] = useState(null);
+  const cardref = useRef(null);
   useEffect(() => {
     fetch("/data/Works.json")
       .then((res) => res.json())
@@ -20,16 +21,18 @@ const Myworks = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
+        setShow(entry.isIntersecting);
         if (entry.isIntersecting) {
-          setShow(true);
-        } else {
-          setShow(false);
+          setcleck(null);
         }
       },
-      { threshold: 0.3 }
+      {
+        threshold: 0,
+        rootMargin: "-100px 0px",
+      }
     );
 
-    observer.observe(ref.current);
+    if (cardref.current) observer.observe(cardref.current);
 
     return () => observer.disconnect();
   }, []);
@@ -45,7 +48,6 @@ const Myworks = () => {
   // console.log(datas);
   return (
     <div
-      ref={ref}
       id="workss"
       className={`md:container min-h-screen pt-20  md:pt-25 font-sans pb-10  mx-auto dark:text-t-fonta  px-3 lg:px-10 flex  
      `}
@@ -58,44 +60,16 @@ const Myworks = () => {
           </button>
         </div>
 
-        <div className="flex flex-col md:flex-wrap md:flex-row gap-5 md:gap-5 px-2 md:px-0 ">
-          {/* {datas.map((item, index) => (
-            <Zoom_in className="w-full">
-              <div
-                key={index}
-                className={`flex-1  shadow-2xl rounded-2xl dark:bg-f-text   
-                 transition-colors duration-500`}
-              >
-                <img
-                  src={item.gambar}
-                  alt=""
-                  className="w-full h-35 object-cover rounded-t-2xl bg-center "
-                />
-                <div className="flex flex-col items-center gap-2 mt-2 text-center pb-5 ">
-                  <h1 className="text-[1.1rem] font-semi">
-                    {item.namaProject}
-                  </h1>
-                  <h1 className="text-[0.8rem] px-6  w-[95%] overflow-hidden">
-                    {item.Deskripsi}
-                  </h1>
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    className="px-4 py-1 dark:bg-kuning bg-t-fonta hover: rounded-md hover:dark:bg-bacg transition duration-500 hover:dark:text-kuning text-black text-[0.9rem] mt-3"
-                  >
-                    view Project
-                  </a>
-                </div>
-              </div>
-            </Zoom_in>
-          ))} */}
+        <div
+          ref={cardref}
+          className="flex flex-wrap   gap-5 md:gap-5 px-2 md:px-0 "
+        >
           {datas.map((item, index) => (
             <div
               key={index}
               onClick={() => handleCleck(index)}
-              className={`flex md:w-[32%] flex-1 mx-auto
-             
-               md:group group md:bg-linear-to-r md:from-transparent md:to-transparent  h-100 transition-all duration-700 ease-in-out  overflow-hidden w-full scale-100`}
+              className={`flex md:w-[32%]  mx-auto md:flex-1
+               group  md:bg-linear-to-r md:from-transparent md:to-transparent  h-100 transition-all duration-700 ease-in-out  overflow-hidden w-full scale-100`}
             >
               <div className=" relative flex items-center justify-center ">
                 <img
@@ -128,7 +102,9 @@ const Myworks = () => {
                   </div>
                   <div
                     className={` md:mt-20  px-3 -translate-x-full  max-h-20 overflow-hidden md:group-hover:translate-x-0 ${
-                      cleck === index ? "translate-x-0 -translate-y-5" : ""
+                      cleck === index
+                        ? "translate-x-0 -translate-y-5"
+                        : "-translate-x-full "
                     }  transition duration-500 ease-in-out group-hover:delay-300`}
                   >
                     <p className="text-[0.7rem]    text-white">
@@ -137,7 +113,7 @@ const Myworks = () => {
                   </div>
                   <div
                     className={`absolute group/item   max-w-23 overflow-hidden bottom-7 md:translate-y-20 md:group-hover:translate-y-0  transition duration-500 group-hover:delay-700 ${
-                      cleck === index ? "translate-y-4 " : "translate-y-20"
+                      cleck === index ? "translate-y-4" : "translate-y-20"
                     } right-7 text-white gap-1 flex-col flex`}
                   >
                     <a
