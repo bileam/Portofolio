@@ -110,7 +110,7 @@ const Myworks = () => {
                 />
                 <div
                   className={`absolute inset-0 ${
-                    cleck === index ? "bg-black/10" : ""
+                    cleck === index ? "bg-black/30" : ""
                   }   md:bg-transparent md:group-hover:bg-black/10 md:group-hover:backdrop-blur-sm
                    md:group-hover:shadow-[0_0_40px_rgba(0,0,0,0.4)] group-hover:delay-200 duration-300 transition-all`}
                 >
