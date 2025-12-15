@@ -115,7 +115,7 @@ const Myworks = () => {
                    md:group-hover:shadow-[0_0_40px_rgba(0,0,0,0.4)] group-hover:delay-200 duration-300 transition-all`}
                 >
                   <div
-                    className={`mt-15   md:text-[1rem] text-[0.8rem] flex flex-col md:group-hover:scale-110  ${
+                    className={`mt-15   md:text-[1rem] tex t-[0.8rem] flex flex-col md:group-hover:scale-110  ${
                       cleck === index
                         ? "-translate-x-4 -translate-y-8"
                         : "translate-0"
@@ -135,7 +135,7 @@ const Myworks = () => {
                         : "-translate-x-full "
                     }  transition duration-500 ease-in-out group-hover:delay-300`}
                   >
-                    <p className="text-[0.7rem]    text-white">
+                    <p className="text-[0.7rem] md:text-[0.8rem]    text-white">
                       {item.Deskripsi}
                     </p>
                   </div>
