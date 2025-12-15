@@ -60,15 +60,43 @@ const Myworks = () => {
           </button>
         </div>
 
-        <div
-          ref={cardref}
-          className="flex flex-wrap   gap-5 md:gap-5 px-2 md:px-0 "
-        >
+        <div className="flex flex-col md:flex-wrap md:flex-row gap-5 md:gap-5 px-2 md:px-0 ">
+          {/* {datas.map((item, index) => (
+            <Zoom_in className="w-full">
+              <div
+                key={index}
+                className={`flex-1  shadow-2xl rounded-2xl dark:bg-f-text   
+                 transition-colors duration-500`}
+              >
+                <img
+                  src={item.gambar}
+                  alt=""
+                  className="w-full h-35 object-cover rounded-t-2xl bg-center "
+                />
+                <div className="flex flex-col items-center gap-2 mt-2 text-center pb-5 ">
+                  <h1 className="text-[1.1rem] font-semi">
+                    {item.namaProject}
+                  </h1>
+                  <h1 className="text-[0.8rem] px-6  w-[95%] overflow-hidden">
+                    {item.Deskripsi}
+                  </h1>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    className="px-4 py-1 dark:bg-kuning bg-t-fonta hover: rounded-md hover:dark:bg-bacg transition duration-500 hover:dark:text-kuning text-black text-[0.9rem] mt-3"
+                  >
+                    view Project
+                  </a>
+                </div>
+              </div>
+            </Zoom_in>
+          ))} */}
           {datas.map((item, index) => (
             <div
               key={index}
               onClick={() => handleCleck(index)}
-              className={`flex md:w-[32%]  mx-auto md:flex-1
+              className={`flex md:w-[32%] flex-1 mx-auto
+             
                group  md:bg-linear-to-r md:from-transparent md:to-transparent  h-100 transition-all duration-700 ease-in-out  overflow-hidden w-full scale-100`}
             >
               <div className=" relative flex items-center justify-center ">
