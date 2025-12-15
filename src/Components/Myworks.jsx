@@ -7,6 +7,7 @@ import Tas from "../assets/Gambar/Tas.png";
 
 const Myworks = () => {
   const [datas, setDatas] = useState([]);
+  const [cleck, setcleck] = useState(null);
   useEffect(() => {
     fetch("/data/Works.json")
       .then((res) => res.json())
@@ -32,6 +33,12 @@ const Myworks = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  const handleCleck = (id) => {
+    if (window.innerWidth < 768) {
+      setcleck(cleck === id ? null : id);
+    }
+  };
 
   // console.log(datas);
   return (
@@ -83,20 +90,31 @@ const Myworks = () => {
           {datas.map((item, index) => (
             <div
               key={index}
-              className="flex md:w-[32%] flex-1 mx-auto group bg-linear-to-r from-transparent to-transparent  h-100 transition-all duration-700 ease-in-out  overflow-hidden w-full scale-100"
+              onClick={() => handleCleck(index)}
+              className={`flex md:w-[32%] flex-1 mx-auto
+             
+               md:group group md:bg-linear-to-r md:from-transparent md:to-transparent  h-100 transition-all duration-700 ease-in-out  overflow-hidden w-full scale-100`}
             >
               <div className=" relative flex items-center justify-center ">
                 <img
                   src={tas}
                   // src={item.gambar}
                   alt=""
-                  className="w-full h-full object-cover group-hover:scale-105 group-hover:opacity-0 group-hover:delay-0  duration-500 transition "
+                  className={`w-full h-full md:object-cover   md:group-hover:scale-105 ${
+                    cleck === index ? "scale-105" : ""
+                  } group-hover:opacity-0 group-hover:delay-0  duration-500 transition`}
                 />
                 <div
-                  className="absolute inset-0      bg-transparent group-hover:bg-black/10 group-hover:backdrop-blur-sm
-                   group-hover:shadow-[0_0_40px_rgba(0,0,0,0.4)] group-hover:delay-200 duration-300 transition-all"
+                  className={`absolute inset-0 ${
+                    cleck === index ? "bg-black" : ""
+                  }   md:bg-transparent md:group-hover:bg-black/10 md:group-hover:backdrop-blur-sm
+                   md:group-hover:shadow-[0_0_40px_rgba(0,0,0,0.4)] group-hover:delay-200 duration-300 transition-all`}
                 >
-                  <div className=" mt-15 flex flex-col group-hover:scale-110 duration-500 transition group-hover:delay-300 ease-in-out ">
+                  <div
+                    className={`mt-15 flex flex-col md:group-hover:scale-110  ${
+                      cleck === index ? "group:scale-110 " : ""
+                    } duration-500 transition group-hover:delay-300 ease-in-out`}
+                  >
                     <h1 className="font-extrabold pl-10 text-white">
                       {item.namaProject}
                     </h1>
@@ -104,12 +122,20 @@ const Myworks = () => {
                       Penjualan Tas
                     </h1>
                   </div>
-                  <div className="  mt-20 px-3 -translate-x-full  max-h-20 overflow-hidden group-hover:translate-x-0 transition duration-500 ease-in-out group-hover:delay-300">
+                  <div
+                    className={` mt-20 px-3 -translate-x-full  max-h-20 overflow-hidden md:group-hover:translate-x-0 ${
+                      cleck === index ? "translate-x-0 " : ""
+                    }  transition duration-500 ease-in-out group-hover:delay-300`}
+                  >
                     <p className="text-[0.7rem]    text-white">
                       {item.Deskripsi}
                     </p>
                   </div>
-                  <div className="absolute group/item   max-w-23 overflow-hidden bottom-7 translate-y-20 group-hover:translate-y-0  transition duration-500 group-hover:delay-700 right-7 text-white gap-1 flex-col flex">
+                  <div
+                    className={`absolute group/item   max-w-23 overflow-hidden bottom-7 md:translate-y-20 md:group-hover:translate-y-0  transition duration-500 group-hover:delay-700 ${
+                      cleck === index ? "translate-y-0" : "translate-y-20"
+                    } right-7 text-white gap-1 flex-col flex`}
+                  >
                     <a
                       href={item.link}
                       target="_blank"
