@@ -37,6 +37,8 @@ const Myworks = () => {
   const handleCleck = (id) => {
     if (window.innerWidth < 768) {
       setcleck(cleck === id ? null : id);
+    } else {
+      setcleck(null);
     }
   };
 
@@ -135,7 +137,7 @@ const Myworks = () => {
                   </div>
                   <div
                     className={`absolute group/item   max-w-23 overflow-hidden bottom-7 md:translate-y-20 md:group-hover:translate-y-0  transition duration-500 group-hover:delay-700 ${
-                      cleck === index ? "translate-y-0" : "translate-y-20"
+                      cleck === index ? "translate-y-4 " : "translate-y-20"
                     } right-7 text-white gap-1 flex-col flex`}
                   >
                     <a
