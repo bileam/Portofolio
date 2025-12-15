@@ -106,13 +106,15 @@ const Myworks = () => {
                 />
                 <div
                   className={`absolute inset-0 ${
-                    cleck === index ? "bg-black" : ""
+                    cleck === index ? "bg-black/10" : ""
                   }   md:bg-transparent md:group-hover:bg-black/10 md:group-hover:backdrop-blur-sm
                    md:group-hover:shadow-[0_0_40px_rgba(0,0,0,0.4)] group-hover:delay-200 duration-300 transition-all`}
                 >
                   <div
-                    className={`mt-15 flex flex-col md:group-hover:scale-110  ${
-                      cleck === index ? "group:scale-110 " : ""
+                    className={`mt-15  md:mb-0 md:text-[1rem] text-[0.8rem] flex flex-col md:group-hover:scale-110  ${
+                      cleck === index
+                        ? "-translate-x-4 -translate-y-2"
+                        : "translate-0"
                     } duration-500 transition group-hover:delay-300 ease-in-out`}
                   >
                     <h1 className="font-extrabold pl-10 text-white">
@@ -123,7 +125,7 @@ const Myworks = () => {
                     </h1>
                   </div>
                   <div
-                    className={` mt-20 px-3 -translate-x-full  max-h-20 overflow-hidden md:group-hover:translate-x-0 ${
+                    className={` md:mt-20  px-3 -translate-x-full  max-h-20 overflow-hidden md:group-hover:translate-x-0 ${
                       cleck === index ? "translate-x-0 " : ""
                     }  transition duration-500 ease-in-out group-hover:delay-300`}
                   >
