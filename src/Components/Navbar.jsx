@@ -83,7 +83,7 @@ const Navbar = ({ isDark, setDark }) => {
               ></div>
               <div
                 className={`border w-5 dark:border-t-fonta transition-all duration-700 ${
-                  click ? "-translate-y-2 -rotate-45" : ""
+                  click ? "-translate-y-1 -rotate-45" : ""
                 } `}
               ></div>
             </button>
