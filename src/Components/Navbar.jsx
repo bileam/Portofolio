@@ -1,17 +1,49 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 
 const Navbar = ({ isDark, setDark }) => {
   const [active, setActive] = useState("home");
   const [click, setClick] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const scrollTo = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     setActive(id);
   };
   //   console.log(click);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // mengambil posisi scroll sekarang
+      // window.scrollY = jarak scroll dari atas halaman (px)
+      const currentScrolly = window.scrollY;
+      // Jika scroll sekarang LEBIH BESAR dari scroll sebelumnya   artinya user sedang scroll ke BAWAH, dan sudah lebih dari 80px
+      if (currentScrolly > lastScrollY && currentScrolly > 80) {
+        //scroll ke bawah
+        setShowNavbar(false);
+      } else {
+        // scroll keatas
+        setShowNavbar(true);
+      }
+      // Simpan posisi scroll SEKARANG
+      // supaya bisa dibandingkan pada scroll berikutnya
+      setLastScrollY(currentScrolly);
+    };
+
+    // Pasang event listener scroll ke window
+    // Setiap scroll → handleScroll dipanggil
+    window.addEventListener("scroll", handleScroll);
+    // Cleanup:
+    // Saat komponen di-unmount atau effect dijalankan ulang
+    // event listener dihapus agar tidak menumpuk
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]); // useEffect akan dijalankan ulang setiap lastScrollY berubah
   return (
-    <nav className="md:container   mx-auto py-4 px-3 lg:px-10 fixed top-0 right-0 left-0 z-100 dark:bg-bacg">
+    <nav
+      className={`md:container transition-all duration-500 ease-in-out ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      }   mx-auto py-4 px-3 lg:px-10 fixed top-0 right-0 left-0 z-100 dark:bg-bacg`}
+    >
       <div className="flex md:flex-row relative  justify-between md:items-center md:dark:bg-bacg md:rounded-full p-2">
         <div className="flex items-center justify-between  w-full md:w-auto pr-2 md:pr-0">
           {/* <h1 className="text-kuning text-[1.5rem] font-semibold">.Bileam</h1>

@@ -1,5 +1,6 @@
 import gambar1 from "../assets/Gambar/noBGgambar.png";
 import Zoom_in from "./Animasi/Zoom_in";
+import TextType from "../Components/Animasi/TextType";
 const Home = () => {
   return (
     <div
@@ -8,11 +9,15 @@ const Home = () => {
     >
       <div className="flex md:flex-row flex-col ">
         <div className="flex flex-col flex-1 gap-5 order-2 md:order-1">
-          <Zoom_in>
-            <h1 className="dark:text-kuning  font-bold text-center md:text-start w-[90%] md:w-[60%]  text-[1.9rem] md:text-[2.4rem]">
-              hi i'am bileam <span className="typing">web developer</span>
-            </h1>
-          </Zoom_in>
+          <div className="dark:text-kuning  font-bold text-center md:text-start w-[90%] md:max-w-[80%]  text-[1.9rem] md:text-[2.4rem]">
+            <TextType
+              text={["Hi i'am Bileam", "I'am Web Developers", "Happy coding!"]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="|"
+            />
+          </div>
 
           <Zoom_in>
             <p className="dark:text-t-fonta md:text-[1rem] text-[0.8rem]   md:text-start text-justify  w-[90%]">
