@@ -6,7 +6,9 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { Skil } from "../dataArray/Skil";
 import Zoom_in from "./Animasi/Zoom_in";
+import useSmoothScroll from "../hooks/useSmoothScroll ";
 const Latihan = () => {
+  useSmoothScroll();
   const [cleck, setCleck] = useState(null);
   const cardRef = useRef(null);
   const [datas, setDatas] = useState([]);
