@@ -10,9 +10,12 @@ import useSmoothScroll from "../hooks/useSmoothScroll ";
 const Latihan = () => {
   useSmoothScroll();
   const [cleck, setCleck] = useState(null);
-  const cardRef = useRef(null);
+
   const [datas, setDatas] = useState([]);
   const [loading, setLoading] = useState(true);
+  const cardRefs = useRef([]);
+  const started = useRef([]);
+  const [counts, setCounts] = useState(Skil.map(() => 0));
 
   const getData = async () => {
     // try {
@@ -25,20 +28,52 @@ const Latihan = () => {
     //   setLoading(false);
     // }
   };
-  useEffect(() => {
-    getData();
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) {
-          setCleck(null); // reset saat keluar layar
-        }
-      },
-      { threshold: 0.3 } // 10% terlihat dianggap “hadir”
-    );
-    if (cardRef.current) observer.observe(cardRef.current);
-    return () => {
-      if (cardRef.current) observer.unobserve(cardRef.current);
+  const animateCount = (index, target) => {
+    let start = 0;
+    const duration = 1500;
+    const increment = target / (duration / 16);
+
+    const counter = () => {
+      start += increment;
+
+      if (start < target) {
+        setCounts((prev) => {
+          const copy = [...prev];
+          copy[index] = Math.ceil(start);
+          return copy;
+        });
+        requestAnimationFrame(counter);
+      } else {
+        setCounts((prev) => {
+          const copy = [...prev];
+          copy[index] = target;
+          return copy;
+        });
+      }
     };
+
+    counter();
+  };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const index = entry.target.dataset.index;
+
+          if (entry.isIntersecting && !started.current[index]) {
+            started.current[index] = true;
+            animateCount(index, Skil[index].penguasaaan);
+          }
+        });
+      },
+      { threshold: 0.9 }
+    );
+
+    cardRefs.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const handleClik = (id) => {
@@ -49,7 +84,6 @@ const Latihan = () => {
 
   return (
     <div
-      ref={cardRef}
       id="skille"
       className="min-h-screen px-10   flex flex-col  text-white md:container  mx-auto relative"
     >
@@ -64,10 +98,12 @@ const Latihan = () => {
         {/* Item 1 kiri */}
         {Skil.map((item, index) => (
           <div
+            ref={(el) => (cardRefs.current[index] = el)}
+            data-index={index}
             key={index}
             onClick={() => handleClik(index)}
             style={{ backgroundImage: `url(${gambar})` }}
-            className={`md:w-[50%] w-full  overflow-hidden relative group      h-80    dark:bg-f-text  
+            className={`md:w-[50%] w-full  overflow-hidden shadow-2xl active:scale-105 md:active:scale-none md:hover:scale-105 transition duration-500 relative group  rounded-2xl     h-80    dark:bg-f-text  
             
            ${index == 0 ? "self-start" : "self-center"}
            ${index == 2 ? "self-start" : "self-center"}
@@ -76,26 +112,29 @@ const Latihan = () => {
           >
             <div className="flex flex-col justify-end h-full relative ">
               <div
-                className={`absolute text-[4rem]
+                className={`absolute text-[4rem] 
               ${
                 cleck === index
                   ? "scale-100 transition-all duration-500 ease-in-out"
                   : ""
               }
-               md:group-hover:scale-125  transition-all duration-700 -translate-y-[150%] text-purple-400 group-hover:text-shadow-purple   w-full flex justify-center`}
+               md:group-hover:scale-110  transition-all duration-700 -translate-y-[150%] text-white group-hover:text-shadow-purple   w-full flex justify-center`}
               >
                 <h1 className="md:hidden   text-[3rem] w-100 flex justify-center  ">
+                  {" "}
                   {cleck === index ? (
                     <span
                       className={`shadow-2xl shadow-purple-400 rounded-full`}
                     >
-                      Omaigattt!!!
+                      penguasaan: {counts[index]}%
                     </span>
                   ) : (
-                    <span> Don't Cleck</span>
+                    <span>penguasaan: {counts[index]}%</span>
                   )}
                 </h1>
-                <h1 className="hidden md:block">Hover Me</h1>
+                <h1 className="hidden md:block">
+                  penguasaan: {counts[index]}%
+                </h1>
               </div>
               <div
                 className={`md:group-hover:-translate-y-100 ${
