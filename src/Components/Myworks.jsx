@@ -101,10 +101,10 @@ const Myworks = () => {
             >
               <div className=" relative flex items-center justify-center ">
                 <img
-                  src={tas}
-                  // src={item.gambar}
+                  // src={tas}
+                  src={item.gambar}
                   alt=""
-                  className={`w-full h-full md:object-cover   md:group-hover:scale-105 ${
+                  className={`w-full h-full object-cover    md:group-hover:scale-105 ${
                     cleck === index ? "scale-105" : ""
                   } group-hover:opacity-0 group-hover:delay-0  duration-500 transition`}
                 />
@@ -125,7 +125,7 @@ const Myworks = () => {
                       {item.namaProject}
                     </h1>
                     <h1 className="font-semibold pl-15 text-white">
-                      Penjualan Tas
+                      {item.nama}
                     </h1>
                   </div>
                   <div

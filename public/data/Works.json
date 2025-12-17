@@ -3,21 +3,24 @@
     "id": 1,
     "gambar": "/Gambar/Tas.png",
     "namaProject": "Toko Tas",
+    "nama": "E-commerce (TOKO TAS)",
     "Deskripsi": "Aura & Co. adalah sebuah toko penjualan tas online yang menghadirkan berbagai pilihan tas berkualitas tinggi dengan desain modern dan elegan. Kami berkomitmen menyediakan produk yang tidak hanya indah secara visual, tetapi juga praktis, nyaman digunakan, dan cocok untuk berbagai kebutuhan sehari-hari.",
     "link": "https://web-tas-h6ax.vercel.app/"
   },
   {
     "id": 2,
-    "gambar": "gambar",
-    "namaProject": "----",
-    "Deskripsi": "..........................................",
+    "gambar": "/Gambar/DRnict.jpeg",
+    "nama": "POS (Poin of Sale)",
+    "namaProject": "Aplikasi Kasir Klinik Kecantikan",
+    "Deskripsi": "Berkolaburasi bersama tim untung mengembang dan membangun sebuah aplikasi POS(poin of sale) berbasis web ",
     "link": "#"
   },
   {
     "id": 3,
-    "gambar": "gambar",
-    "namaProject": "-----",
-    "Deskripsi": ".............................................",
+    "gambar": "/Gambar/image.png",
+    "nama": "Personal Project (Portofolio)",
+    "namaProject": "Portofolio",
+    "Deskripsi": "membangun aplikasi portofolio berbasis web mengembangkan aplikasi web menggunakan html,css,javascript",
     "link": "#"
   }
 ]
