@@ -1,6 +1,8 @@
 import gambar from "../assets/javasript.svg";
 import tailwindcss from "../assets/logo_tailwincss.svg";
 import react from "../assets/react.svg";
+import html from "../assets/html.svg";
+import css from "../assets/css.svg";
 export const Skil = [
   {
     nama: "Java Script",
@@ -22,5 +24,19 @@ export const Skil = [
     penguasaaan: 90,
     deskripsi:
       "Tailwind CSS adalah utility-first CSS framework yang menyediakan kelas-kelas kecil siap pakai untuk membuat tampilan website secara cepat dan fleksibel. Berbeda dengan framework lain seperti Bootstrap yang menyediakan komponen jadi (navbar, card, modal), Tailwind memberi kamu kebebasan penuh melalui kelas-kelas utility",
+  },
+  {
+    nama: "HTML",
+    gambar: html,
+    penguasaaan: 95,
+    deskripsi:
+      "HTML adalah bahasa markup dasar untuk membangun struktur halaman website, seperti judul, teks, gambar, dan link. HTML berperan sebagai kerangka utama agar konten dapat ditampilkan dengan rapi di browser.",
+  },
+  {
+    nama: "CSS",
+    gambar: css,
+    penguasaaan: 70,
+    deskripsi:
+      "CSS adalah bahasa stylesheet yang digunakan untuk mengatur tampilan website, seperti warna, font, layout, dan animasi, agar halaman terlihat menarik dan rapi.",
   },
 ];

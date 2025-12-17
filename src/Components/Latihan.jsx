@@ -30,7 +30,7 @@ const Latihan = () => {
   };
   const animateCount = (index, target) => {
     let start = 0;
-    const duration = 1500;
+    const duration = 2000;
     const increment = target / (duration / 16);
 
     const counter = () => {
@@ -61,6 +61,7 @@ const Latihan = () => {
           const index = entry.target.dataset.index;
 
           if (entry.isIntersecting && !started.current[index]) {
+            // started.current[index] = false;
             started.current[index] = true;
             animateCount(index, Skil[index].penguasaaan);
           }
@@ -107,6 +108,7 @@ const Latihan = () => {
             
            ${index == 0 ? "self-start" : "self-center"}
            ${index == 2 ? "self-start" : "self-center"}
+           ${index == 4 ? "self-start" : "self-center"}
 
             z-1`}
           >
@@ -126,15 +128,13 @@ const Latihan = () => {
                     <span
                       className={`shadow-2xl shadow-purple-400 rounded-full`}
                     >
-                      penguasaan: {counts[index]}%
+                      {counts[index]}%
                     </span>
                   ) : (
-                    <span>penguasaan: {counts[index]}%</span>
+                    <span>{counts[index]}%</span>
                   )}
                 </h1>
-                <h1 className="hidden md:block">
-                  penguasaan: {counts[index]}%
-                </h1>
+                <h1 className="hidden md:block">kompetensi {counts[index]}%</h1>
               </div>
               <div
                 className={`md:group-hover:-translate-y-100 ${

@@ -35,7 +35,7 @@ const Home = () => {
                 Hare me
               </button>
               <a
-                href="/CV-Bileam_Mangalla.pdf"
+                href="/Bileam Mangalla_CV.pdf"
                 download
                 className="dark:border-kuning cursor-pointer  border-2 dark:text-kuning  px-2 py-1 rounded-lg shadow-2xl "
               >
