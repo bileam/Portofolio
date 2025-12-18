@@ -112,6 +112,17 @@ const Navbar = ({ isDark, setDark }) => {
             About
           </Link>
           <Link
+            to="galeri"
+            smooth={true}
+            duration={500}
+            activeClass="border-b border-kuning"
+            spy={true}
+            // offset={-50}
+            className="cursor-pointer"
+          >
+            Gallery
+          </Link>
+          <Link
             to="skille"
             smooth={true}
             duration={500}
@@ -196,6 +207,18 @@ const Navbar = ({ isDark, setDark }) => {
               className="cursor-pointer"
             >
               About
+            </Link>
+            <Link
+              onClick={() => setClick(false)}
+              to="galeri"
+              smooth={true}
+              duration={500}
+              activeClass="border-b dark:border-kuning w-20 dark:text-kuning  text-f-text"
+              spy={true}
+              // offset={-50}
+              className="cursor-pointer"
+            >
+              Gallery
             </Link>
             <Link
               onClick={() => setClick(!click)}

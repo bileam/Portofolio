@@ -86,7 +86,7 @@ const Latihan = () => {
   return (
     <div
       id="skille"
-      className="min-h-screen px-10   flex flex-col  text-white md:container  mx-auto relative"
+      className="min-h-screen px-10 mt-60  flex flex-col  text-white md:container  mx-auto relative"
     >
       {/* <div className="sticky text-white inset-x-5 border  top-[50%] bottom-0">
         <h1 className=" ">testing</h1>
@@ -134,7 +134,7 @@ const Latihan = () => {
                     <span>{counts[index]}%</span>
                   )}
                 </h1>
-                <h1 className="hidden md:block">kompetensi {counts[index]}%</h1>
+                <h1 className="hidden md:block">{counts[index]}%</h1>
               </div>
               <div
                 className={`md:group-hover:-translate-y-100 ${

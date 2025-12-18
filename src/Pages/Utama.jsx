@@ -8,6 +8,7 @@ import Client from "../Components/Client";
 import Contect from "../Components/Contect";
 import Footer from "../Components/Footer";
 import Latihan from "../Components/Latihan";
+import Galery from "../Components/Galeri";
 
 const Utama = () => {
   const [isDark, setDark] = useState(true);
@@ -17,6 +18,7 @@ const Utama = () => {
         <Navbar isDark={isDark} setDark={setDark} />
         <Home />
         <About />
+        <Galery />
         {/* <MySkill /> */}
         <Latihan />
         <Myworks />
