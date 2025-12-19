@@ -9,34 +9,34 @@ export const Skil = [
     gambar: gambar,
     penguasaaan: 75,
     deskripsi:
-      "  JavaScript (JS) adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif, dinamis, dan hidup. Jika HTML adalah kerangka, dan CSS adalah tampilan, maka  JavaScript adalah otak yang membuat website bisa bergerak dan merespons pengguna.",
+      " Saya memiliki kemampuan dalam memanfaatkan JavaScript untuk pembuatan data dummy, manipulasi DOM, serta pengolahan data dalam format JSON guna mendukung pengembangan aplikasi berbasis web.",
   },
   {
     nama: "React js",
     gambar: react,
     penguasaaan: 80,
     deskripsi:
-      "React.js adalah library JavaScript yang digunakan untuk membangun user interface (UI) pada aplikasi web. React dibuat oleh Facebook (sekarang Meta) dan sangat populer karena cepat, fleksibel, dan mudah digunakan. Dengan React, kamu dapat membuat tampilan web berupa komponen—bagian-bagian kecil UI yang bisa digunakan ulang, seperti tombol, card, navbar, form, dll.",
+      "Berpengalaman dalam pengembangan aplikasi web menggunakan React untuk pengelolaan data end-to-end, mulai dari fetching data, input data ke database melalui API, hingga perancangan UI responsif dengan Tailwind CSS.",
   },
   {
     nama: "TailwindCss",
     gambar: tailwindcss,
     penguasaaan: 90,
     deskripsi:
-      "Tailwind CSS adalah utility-first CSS framework yang menyediakan kelas-kelas kecil siap pakai untuk membuat tampilan website secara cepat dan fleksibel. Berbeda dengan framework lain seperti Bootstrap yang menyediakan komponen jadi (navbar, card, modal), Tailwind memberi kamu kebebasan penuh melalui kelas-kelas utility",
+      "Menggunakan Tailwind CSS untuk mengimplementasikan desain antarmuka pengguna berbasis utility-first, termasuk pengaturan layout responsif, styling komponen, dan optimasi tampilan.",
   },
   {
     nama: "HTML",
     gambar: html,
     penguasaaan: 95,
     deskripsi:
-      "HTML adalah bahasa markup dasar untuk membangun struktur halaman website, seperti judul, teks, gambar, dan link. HTML berperan sebagai kerangka utama agar konten dapat ditampilkan dengan rapi di browser.",
+      "Memiliki kemampuan dalam membangun struktur web yang semantik dan terorganisir menggunakan HTML, mendukung performa, aksesibilitas, dan kemudahan pengembangan lanjutan.",
   },
   {
     nama: "CSS",
     gambar: css,
     penguasaaan: 70,
     deskripsi:
-      "CSS adalah bahasa stylesheet yang digunakan untuk mengatur tampilan website, seperti warna, font, layout, dan animasi, agar halaman terlihat menarik dan rapi.",
+      "Berpengalaman dalam mengombinasikan CSS dan Tailwind CSS untuk merancang animasi antarmuka, mengelola skema warna, serta membangun desain UI yang konsisten dan responsif.",
   },
 ];
