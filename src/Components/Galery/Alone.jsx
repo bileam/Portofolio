@@ -7,7 +7,7 @@ import { Sendiri } from "../../dataArray/Sendiri";
 const Alone = () => {
   return (
     <div className="flex  md:flex-row flex-col items-center  md:justify-center">
-      {Sendiri.map((item, index) => (
+      {Sendiri.slice(-3).map((item, index) => (
         <Zoom_in
           key={index}
           className="relative max-w-[70%] lg:max-w-[29%] md:min-w-[29%] hover:scale transition duration-700  overflow-hidden group"

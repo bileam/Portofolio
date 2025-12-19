@@ -88,15 +88,11 @@ const Latihan = () => {
       id="skille"
       className="min-h-screen px-10 mt-60  flex flex-col  text-white md:container  mx-auto relative"
     >
-      {/* <div className="sticky text-white inset-x-5 border  top-[50%] bottom-0">
-        <h1 className=" ">testing</h1>
-      </div> */}
-
       <div className="md:text-[4rem] text-[2rem] sticky  flex  justify-center top-[50%] bottom-0 mt-0  z-0 mb-[20%] w-full">
         <h1 className="font-mono">My Skill</h1>
       </div>
       <div className="flex flex-col mt-20 mb-[50%] gap-40 ">
-        {/* Item 1 kiri */}
+      
         {Skil.map((item, index) => (
           <div
             ref={(el) => (cardRefs.current[index] = el)}
@@ -162,7 +158,7 @@ const Latihan = () => {
                   <h1 className="text-[1.5rem]">{item.nama}</h1>
                   <p className="text-stars max-w-[95%] overflow-hidden text-[0.9rem] ">
                     {item.deskripsi}
-                    {/* {item.deskripsi} */}
+                 
                   </p>
                 </div>
               </div>
