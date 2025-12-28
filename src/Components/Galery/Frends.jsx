@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Friend } from "../../dataArray/Friend";
+import Zoom_in from "../Animasi/Zoom_in";
 const Frends = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
@@ -18,12 +19,12 @@ const Frends = () => {
   }
   return (
     <div className="flex  md:flex-row flex-col items-center  md:justify-center">
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 auto-rows-[100px] ">
+      <Zoom_in className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 auto-rows-[100px] w-full">
         {data.map((item, index) => (
           <div
             key={index}
             style={{ gridRow: `span ${item.row}` }}
-            className="overflow-hidden hover:scale-95 duration-500 transition-all"
+            className="overflow-hidden hover:scale-95 duration-500 transition-all w-full border "
           >
             <img
               src={item.gambar}
@@ -32,7 +33,7 @@ const Frends = () => {
             />
           </div>
         ))}
-      </div>
+      </Zoom_in>
     </div>
   );
 };

@@ -60,7 +60,7 @@ const Myworks = () => {
           </button>
         </div>
 
-        <div className="flex flex-col md:flex-wrap md:flex-row gap-5 md:gap-5 px-2 md:px-0 ">
+        <div className="flex flex-col md:flex-wrap md:flex-row gap-2 lg:gap-5 px-2 md:px-0 ">
           {/* {datas.map((item, index) => (
             <Zoom_in className="w-full">
               <div
@@ -95,7 +95,7 @@ const Myworks = () => {
             <div
               key={index}
               onClick={() => handleCleck(index)}
-              className={`flex md:w-[32%] flex-1 mx-auto
+              className={`flex lg:w-full flex-1 mx-auto  
              
                group  md:bg-linear-to-r md:from-transparent md:to-transparent  h-100 transition-all duration-700 ease-in-out  overflow-hidden w-full scale-100`}
             >

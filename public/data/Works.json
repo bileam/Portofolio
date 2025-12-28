@@ -22,5 +22,13 @@
     "namaProject": "Portofolio",
     "Deskripsi": "membangun aplikasi portofolio berbasis web mengembangkan aplikasi web menggunakan html,css,javascript",
     "link": "#"
+  },
+  {
+    "id": 3,
+    "gambar": "/Gambar/keuangan.jpeg",
+    "nama": "Personal Project (Pengelola Keuangan)",
+    "namaProject": "Manajement Keuangan pribadi",
+    "Deskripsi": "membangun aplikasi Manajement keuangan agar dapat mengelola pengeluaran dan pemasukan  berbasis web mengembangkan aplikasi web menggunakan html,css,javascript",
+    "link": "https://pengelolakeuangan.vercel.app/"
   }
 ]
