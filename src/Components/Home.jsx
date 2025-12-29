@@ -1,6 +1,7 @@
 import gambar1 from "../assets/Gambar/noBGgambar.png";
 import Zoom_in from "./Animasi/Zoom_in";
 import TextType from "../Components/Animasi/TextType";
+import "../style/Home.css";
 const Home = () => {
   return (
     <div
@@ -20,7 +21,7 @@ const Home = () => {
           </div>
 
           <Zoom_in>
-            <p className="dark:text-t-fonta md:text-[1rem] text-[0.8rem]   md:text-start text-justify  w-[90%]">
+            <p className="jenis-text dark:text-t-fonta md:text-[1rem] text-[0.8rem]   md:text-start text-justify  w-[90%]">
               Hallo.. Nama saya bileam mangalla, saya lahir di toraja
               09-januari-2003, jika di jumlahkan sekarang umur saya 22 Tahun,
               saya lulusan S1 Teknik Informatika di Universitas Kristen Satya

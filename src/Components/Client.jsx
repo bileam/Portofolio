@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../style/client.css";
 import Zoom_in from "./Animasi/Zoom_in";
 
 const Client = () => {
@@ -24,8 +25,68 @@ const Client = () => {
             See All
           </a>
         </div>
-        <div className="overflow-hidden whitespace-nowrap">
-          <div className=" w-full animate-slide-left hover:pause-animation  mt-5 flex md:gap-10 gap-5 justify-center  transition-all duration-700">
+        <div className=" overflow-hidden  whitespace-nowrap">
+          {/* <div className="group">
+            <div className="card">1</div>
+            <div className="card">2</div>
+            <div className="card">3</div>
+            <div className="card">4</div>
+          </div>
+          <div className="group">
+            <div className="card">1</div>
+            <div className="card">2</div>
+            <div className="card">3</div>
+            <div className="card">4</div>
+          </div> */}
+          <div className=" w-full animate-slide-left  hover:pause-animation  mt-5 flex md:gap-10 gap-5 justify-center  transition-all duration-700">
+            {datas.map((item, index) => (
+              <Zoom_in
+                key={index}
+                className="dark:bg-f-text max-w-[47%] md:w-[31%]   hover:scale-110   rounded-2xl flex flex-col items-center py-6     gap-2 shadow-lg"
+              >
+                <img
+                  src={item.image}
+                  alt=""
+                  className="w-15 md:w-30 md:h-30  rounded-full h-15 animate-rotateY  object-cover bg-center"
+                />
+                <h1 className="text-[0.9rem] font-semibold">{item.name}</h1>
+                <p className="max-w-[99%]  overflow-hidden max-h-30 text-center text-[0.8rem]">
+                  {item.message}
+                </p>
+              </Zoom_in>
+            ))}
+            {datas.map((item, index) => (
+              <Zoom_in
+                key={index}
+                className="dark:bg-f-text max-w-[47%] md:w-[31%]  hover:scale-110   rounded-2xl flex flex-col items-center py-6     gap-2 shadow-lg"
+              >
+                <img
+                  src={item.image}
+                  alt=""
+                  className="w-15 md:w-30 md:h-30  rounded-full h-15 animate-rotateY  object-cover bg-center"
+                />
+                <h1 className="text-[0.9rem] font-semibold">{item.name}</h1>
+                <p className="max-w-[99%]  overflow-hidden max-h-30 text-center text-[0.8rem]">
+                  {item.message}
+                </p>
+              </Zoom_in>
+            ))}
+            {datas.map((item, index) => (
+              <Zoom_in
+                key={index}
+                className="dark:bg-f-text max-w-[47%] md:w-[31%]  hover:scale-110   rounded-2xl flex flex-col items-center py-6     gap-2 shadow-lg"
+              >
+                <img
+                  src={item.image}
+                  alt=""
+                  className="w-15 md:w-30 md:h-30  rounded-full h-15 animate-rotateY  object-cover bg-center"
+                />
+                <h1 className="text-[0.9rem] font-semibold">{item.name}</h1>
+                <p className="max-w-[99%]  overflow-hidden max-h-30 text-center text-[0.8rem]">
+                  {item.message}
+                </p>
+              </Zoom_in>
+            ))}
             {datas.map((item, index) => (
               <Zoom_in
                 key={index}

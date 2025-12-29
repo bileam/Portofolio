@@ -22,17 +22,18 @@
 /* geser ke kiri */
 @layer utilities {
   @keyframes slide-left {
-    0% {
-      transform: translateX(100%);
+  
+  0%{
+      transform: translate(0);
     }
    
-    100% {
-      transform: translateX(-100%);
+    100%{
+      transform: translate(-100%);
     }
   }
 
   .animate-slide-left {
-    animation: slide-left 30s linear infinite;
+    animation: slide-left 30s  linear infinite  ;
   }
   
   .hover\:pause-animation:hover {

@@ -1,0 +1,30 @@
+.carrosel {
+  margin: 100px;
+  width: 90%;
+  display: flex;
+}
+.carrosel .group {
+  display: flex;
+  gap: 25px;
+  animation: spin 5s infinite linear;
+}
+
+.carrosel .group .card {
+  display: flex;
+  justify-content: center;
+
+  border: 2px solid;
+  background-color: black;
+  color: white;
+  padding: 1em;
+  margin: 1em;
+}
+
+@keyframes spin {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translate(-100%);
+  }
+}
