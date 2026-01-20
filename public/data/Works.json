@@ -24,11 +24,27 @@
     "link": "#"
   },
   {
-    "id": 3,
+    "id": 4,
     "gambar": "/Gambar/keuangan.jpeg",
     "nama": "Personal Project (Pengelola Keuangan)",
     "namaProject": "Manajement Keuangan pribadi",
     "Deskripsi": "membangun aplikasi Manajement keuangan agar dapat mengelola pengeluaran dan pemasukan  berbasis web mengembangkan aplikasi web menggunakan html,css,javascript",
     "link": "https://pengelolakeuangan.vercel.app/"
+  },
+  {
+    "id": 5,
+    "gambar": "/Gambar/Article.jpeg",
+    "nama": "Personal Project (Article Managemant Dashboard)",
+    "namaProject": "Article Managemant Dashboard",
+    "Deskripsi": "Aplikasi ini dibuat khusus untuk latihan, dengan fokus pada penggunaan React Context untuk mengelola state dan simulasi pengelolaan data artikel secara sederhana.",
+    "link": "https://article-management-dashboard-fawn.vercel.app/"
+  },
+  {
+    "id": 6,
+    "gambar": "/Gambar/dashboarsales.jpeg",
+    "nama": "Sales & Inventory Admin Dashboard",
+    "namaProject": "Sales & Inventory Admin Dashboard",
+    "Deskripsi": "Aplikasi web berbasis React dengan Tailwind CSS yang berfungsi sebagai dashboard manajemen admin untuk monitoring penjualan, pengguna, item, transaksi, dan laporan. Semua data bersifat dummy dan state-only di frontend, sehingga cocok untuk latihan pengelolaan state, komponen interaktif, dan UI/UX responsive.",
+    "link": "#"
   }
 ]
